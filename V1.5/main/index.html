@@ -1,0 +1,3379 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Winsimple V1.5 API Documentation - Winsimple API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="yellow" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#winsimple-v15-api-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Winsimple API" class="md-header__button md-logo" aria-label="Winsimple API" data-md-component="logo">
+      
+  <img src="../../images/Logomark (Black).svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Winsimple API
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Winsimple V1.5 API Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="yellow" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="yellow" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Winsimple API" class="md-nav__button md-logo" aria-label="Winsimple API" data-md-component="logo">
+      
+  <img src="../../images/Logomark (Black).svg" alt="logo">
+
+    </a>
+    Winsimple API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-core-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Core Utilities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Core Utilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wstimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ws::Timer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helper-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helper Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Data Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rectangle-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rectangle Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wshue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ws::Hue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sound-wswav" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sound — ws::Wav
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Sound — ws::Wav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Static Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Graphics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Graphics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-wsview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 ws::View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#world-rect-what-part-of-the-world-to-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        World Rect — what part of the world to show
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-rect-where-on-screen-to-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port Rect — where on screen to render
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinate-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinate Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-wstexture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 ws::Texture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-wsgif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 ws::GIF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-wsdrawable-base-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 ws::Drawable (base class)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-wssprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 ws::Sprite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-wsline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 ws::Line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-wsfont-wstext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 ws::Font &amp; ws::Text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-wspoly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 ws::Poly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-wsradial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 ws::Radial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-wsround" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 ws::Round
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-wsshiftdata-wsshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 ws::ShiftData &amp; ws::Shift
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-window-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Window System
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Window System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-wswindow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 ws::Window
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drawing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Window State
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-coordinate-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View &amp; Coordinate Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#win32-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Win32 Styles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#child-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Child Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-wscursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 ws::Cursor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-wsdroptarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 ws::DropTarget
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-child-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Child Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Child Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-wschild-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 ws::Child (base)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-wsbutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 ws::Button
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-wstextbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 ws::TextBox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-wslabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 ws::Label
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-wsslider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 ws::Slider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-wscombobox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 ws::ComboBox
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-menus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Menus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Menus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-wsmenu-wsdropdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 ws::Menu &amp; ws::Dropdown
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-wsclickmenu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 ws::ClickMenu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-clipboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Clipboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-file-dialogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. File Dialogs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. File Dialogs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wsfilewindow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ws::FileWindow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsfolderwindow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ws::FolderWindow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-global-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Global Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-complex-usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Complex Usage Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Complex Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-animated-spritesheet-with-a-scrolling-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Animated Spritesheet with a Scrolling Camera
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-drag-and-drop-image-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Drag-and-Drop Image Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-ui-layout-with-controls-and-a-menu-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: UI Layout with Controls and a Menu Bar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-polygon-physics-and-texture-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4: Polygon Physics and Texture Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-audio-player-with-a-seek-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 5: Audio Player with a Seek Bar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-6-pixel-drawing-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 6: Pixel Drawing Canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="winsimple-v15-api-documentation">Winsimple V1.5 API Documentation</h1>
+<iframe width="560" height="315" src="https://youtube.com/embed/4Zp3NfUOrMI" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/u3GmUnYQHYg" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/upzc98Zgysc" frameborder="0" allowfullscreen></iframe>
+
+<pre><code class="language-cpp">#include &quot;winsimple.h&quot;
+</code></pre>
+<p><strong>Linker flags:</strong> <code>-lgdi32 -luser32 -lole32 -lmsimg32 -lkernel32 -lwinmm -lcomctl32 -lgdiplus -lshlwapi -lcomdlg32 -luuid</code></p>
+<p>All classes and functions live in the <code>ws::</code> namespace.</p>
+<hr />
+<h2 id="1-core-utilities">1. Core Utilities</h2>
+<h3 id="wstimer"><code>ws::Timer</code></h3>
+<p>High-resolution timer built on <code>QueryPerformanceCounter</code>.</p>
+<pre><code class="language-cpp">ws::Timer timer;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>restart()</code></td>
+<td><code>double</code></td>
+<td>Resets the timer. Returns the elapsed seconds before reset.</td>
+</tr>
+<tr>
+<td><code>getSeconds()</code></td>
+<td><code>double</code></td>
+<td>Elapsed time in seconds since last restart.</td>
+</tr>
+<tr>
+<td><code>getMilliSeconds()</code></td>
+<td><code>double</code></td>
+<td>Elapsed time in milliseconds.</td>
+</tr>
+<tr>
+<td><code>getMicroSeconds()</code></td>
+<td><code>double</code></td>
+<td>Elapsed time in microseconds.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-cpp">ws::Timer timer;
+while (window.isOpen()) {
+    double dt = timer.restart(); // delta time in seconds
+    x += speed * dt;
+}
+</code></pre>
+<hr />
+<h3 id="helper-functions">Helper Functions</h3>
+<pre><code class="language-cpp">std::wstring ws::WIDE(std::string str);        // UTF-8 string → wide string
+std::string  ws::SHORT(const std::wstring&amp; w); // Wide string → UTF-8 string
+</code></pre>
+<p>These are used internally throughout the library but are available for your own use whenever you need to interop with wide-string Win32 APIs.</p>
+<hr />
+<h2 id="2-data-types">2. Data Types</h2>
+<p>Winsimple provides vector and rectangle types that interoperate freely with Win32 structs. All constructors accept any compatible arithmetic type or any struct with matching member names.</p>
+<h3 id="vector-types">Vector Types</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Members</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ws::Vec2i</code></td>
+<td><code>int x, y</code></td>
+<td>Implicitly converts to/from any <code>{x, y}</code> struct and <code>POINT*</code></td>
+</tr>
+<tr>
+<td><code>ws::Vec2f</code></td>
+<td><code>float x, y</code></td>
+<td>Same conversions</td>
+</tr>
+<tr>
+<td><code>ws::Vec2d</code></td>
+<td><code>double x, y</code></td>
+<td>Same conversions</td>
+</tr>
+<tr>
+<td><code>ws::Vec3i</code></td>
+<td><code>int x, y, z</code></td>
+<td>Implicitly converts to/from any <code>{x, y, z}</code> struct</td>
+</tr>
+<tr>
+<td><code>ws::Vec3f</code></td>
+<td><code>float x, y, z</code></td>
+<td>Same conversions</td>
+</tr>
+<tr>
+<td><code>ws::Vec3d</code></td>
+<td><code>double x, y, z</code></td>
+<td>Same conversions</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-cpp">ws::Vec2i pos(100, 200);
+ws::Vec2f vel(1.5f, -3.0f);
+
+// Implicit conversion to Win32 POINT
+POINT p = pos;
+// Implicit conversion from POINT
+POINT winPoint = {50, 75};
+ws::Vec2i v = winPoint;
+</code></pre>
+<h3 id="rectangle-types">Rectangle Types</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Members</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ws::IntRect</code></td>
+<td><code>int left, top, width, height</code></td>
+<td>Automatically converts from <code>RECT</code> (right/bottom style)</td>
+</tr>
+<tr>
+<td><code>ws::FloatRect</code></td>
+<td><code>float left, top, width, height</code></td>
+<td>Same conversions</td>
+</tr>
+<tr>
+<td><code>ws::DoubleRect</code></td>
+<td><code>double left, top, width, height</code></td>
+<td>Same conversions</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-cpp">ws::IntRect rect(0, 0, 800, 600); // left, top, width, height
+
+// Convert to Win32 RECT (right/bottom style) automatically
+RECT winRect = rect;
+
+// Convert from Win32 RECT
+RECT r = {0, 0, 800, 600};
+ws::IntRect myRect = r; // width/height are calculated from right-left, bottom-top
+</code></pre>
+<hr />
+<h3 id="wshue"><code>ws::Hue</code></h3>
+<p>An RGBA colour type that implicitly converts to and from <code>Gdiplus::Color</code> and <code>COLORREF</code>.</p>
+<pre><code class="language-cpp">ws::Hue color(255, 128, 0);       // r, g, b — alpha defaults to 255
+ws::Hue color(255, 128, 0, 200);  // r, g, b, a
+</code></pre>
+<p><strong>Predefined colours:</strong></p>
+<p><code>ws::Hue::red</code>, <code>::green</code>, <code>::blue</code>, <code>::orange</code>, <code>::brown</code>, <code>::yellow</code>, <code>::cyan</code>, <code>::purple</code>, <code>::pink</code>, <code>::grey</code>, <code>::black</code>, <code>::white</code></p>
+<pre><code class="language-cpp">ws::Hue col = ws::Hue::cyan;
+
+Gdiplus::Color gdip = col;  // implicit conversion for GDI+ functions
+COLORREF       cr   = col;  // implicit conversion for Win32 functions
+</code></pre>
+<p><strong>Public members:</strong> <code>int r, g, b, a</code></p>
+<hr />
+<h2 id="3-sound-wswav">3. Sound — <code>ws::Wav</code></h2>
+<p>Wraps the Windows MCI audio API. Supported formats: <code>.wav</code>, <code>.mid</code>, <code>.midi</code>, <code>.mp3</code>, <code>.wma</code>.</p>
+<p>Each <code>Wav</code> object owns one <strong>channel</strong> — an integer ID used by MCI to track a playback device. Multiple <code>Wav</code> objects can play simultaneously as long as they use different channel IDs. Use <code>ws::Wav::getFreeChannel()</code> to find an available one automatically.</p>
+<pre><code class="language-cpp">ws::Wav music;
+music.open(&quot;theme.mp3&quot;, ws::Wav::getFreeChannel());
+music.play();
+</code></pre>
+<h3 id="construction">Construction</h3>
+<pre><code class="language-cpp">ws::Wav sound;                        // Default — call open() before use
+ws::Wav sound(&quot;sfx.wav&quot;, 0, true);   // path, channel ID, blocking
+</code></pre>
+<p>When <code>blocking</code> is <code>true</code>, calling <code>play()</code> while the sound is already playing does nothing. Set it to <code>false</code> to allow restarting mid-playback.</p>
+<hr />
+<h3 id="instance-methods">Instance Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>open(path, channel, blocking)</code></td>
+<td><code>bool</code></td>
+<td>Loads a file onto a channel. Must be called before <code>play()</code>.</td>
+</tr>
+<tr>
+<td><code>play()</code></td>
+<td><code>void</code></td>
+<td>Starts playback.</td>
+</tr>
+<tr>
+<td><code>stop()</code></td>
+<td><code>void</code></td>
+<td>Pauses playback.</td>
+</tr>
+<tr>
+<td><code>setVolume(percent)</code></td>
+<td><code>bool</code></td>
+<td>Volume from 0–100. Not supported for MIDI files.</td>
+</tr>
+<tr>
+<td><code>getVolume()</code></td>
+<td><code>int</code></td>
+<td>Returns current volume 0–100.</td>
+</tr>
+<tr>
+<td><code>setProgress(seconds)</code></td>
+<td><code>bool</code></td>
+<td>Seeks to a position. Works whether playing or paused.</td>
+</tr>
+<tr>
+<td><code>getProgress()</code></td>
+<td><code>long</code></td>
+<td>Current playback position in seconds.</td>
+</tr>
+<tr>
+<td><code>getLength()</code></td>
+<td><code>long</code></td>
+<td>Total duration in seconds.</td>
+</tr>
+<tr>
+<td><code>isFinished()</code></td>
+<td><code>bool</code></td>
+<td>True when playback has reached the end.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="static-methods">Static Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ws::Wav::PlayFree(path, channel)</code></td>
+<td><code>bool</code></td>
+<td>One-shot playback without a <code>Wav</code> object.</td>
+</tr>
+<tr>
+<td><code>ws::Wav::stop(channel)</code></td>
+<td><code>void</code></td>
+<td>Pauses the given channel by ID.</td>
+</tr>
+<tr>
+<td><code>ws::Wav::getChannelStatus(channel)</code></td>
+<td><code>string</code></td>
+<td>Returns <code>"playing"</code>, <code>"stopped"</code>, <code>"paused"</code>, or <code>"error"</code>.</td>
+</tr>
+<tr>
+<td><code>ws::Wav::getFreeChannel()</code></td>
+<td><code>int</code></td>
+<td>Scans channels 0–99 and returns the first one that isn't playing or paused.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-cpp">// Fire-and-forget sound effect on any free channel
+ws::Wav::PlayFree(&quot;explosion.wav&quot;, ws::Wav::getFreeChannel());
+</code></pre>
+<hr />
+<h2 id="4-graphics">4. Graphics</h2>
+<iframe width="560" height="315" src="https://youtube.com/embed/fVa-FxFO8TM" frameborder="0" allowfullscreen></iframe>
+
+<h3 id="41-wsview">4.1 <code>ws::View</code></h3>
+<p>Defines a 2D camera. It has two rectangles:</p>
+<ul>
+<li><strong>World rect</strong> — which region of the game/app world to show.</li>
+<li><strong>Port rect</strong> — where on the screen to display it.</li>
+</ul>
+<p>By default, both are set to the full window size when you call <code>window.create()</code>.</p>
+<pre><code class="language-cpp">ws::View view;
+view.init(0, 0, 800, 600); // left, top, width, height
+window.setView(view);
+</code></pre>
+<h3 id="world-rect-what-part-of-the-world-to-show">World Rect — what part of the world to show</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setRect(left, top, width, height)</code></td>
+<td>Sets the world-space rectangle directly.</td>
+</tr>
+<tr>
+<td><code>getRect()</code> → <code>ws::IntRect</code></td>
+<td>Returns the current world rectangle.</td>
+</tr>
+<tr>
+<td><code>setCenter(x, y)</code> / <code>getCenter()</code></td>
+<td>Pan the view by repositioning its center.</td>
+</tr>
+<tr>
+<td><code>setSize(size)</code> / <code>getSize()</code></td>
+<td>World rectangle dimensions.</td>
+</tr>
+<tr>
+<td><code>move(dx, dy)</code></td>
+<td>Shifts the world rect by a delta amount.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="port-rect-where-on-screen-to-render">Port Rect — where on screen to render</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setPortRect(left, top, width, height)</code></td>
+<td>Sets the screen viewport.</td>
+</tr>
+<tr>
+<td><code>getPortRect()</code> → <code>ws::IntRect</code></td>
+<td>Returns the viewport.</td>
+</tr>
+<tr>
+<td><code>setPortCenter(x, y)</code> / <code>getPortCenter()</code></td>
+<td>Repositions the viewport by its center.</td>
+</tr>
+<tr>
+<td><code>setPortSize(size)</code> / <code>getPortSize()</code></td>
+<td>Viewport dimensions.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transform">Transform</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setRotation(degrees)</code> / <code>getRotation()</code></td>
+<td>Rotates the entire view in degrees.</td>
+</tr>
+<tr>
+<td><code>setZoom(val)</code> / <code>getZoom()</code></td>
+<td>Zoom level as a power-of-2 scale. <code>0</code> = 1:1, <code>1</code> = 2× in, <code>-1</code> = 2× out.</td>
+</tr>
+<tr>
+<td><code>setPortRotatePoint(x, y)</code></td>
+<td>Sets the pivot for view rotation in screen space.</td>
+</tr>
+<tr>
+<td><code>setPortRotatePointCenter()</code></td>
+<td>Convenience: sets the pivot to the centre of the port.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="coordinate-conversion">Coordinate Conversion</h3>
+<pre><code class="language-cpp">// Convert a screen pixel position to a world coordinate
+ws::Vec2i world = view.toWorld(screenX, screenY, windowSize);
+
+// Convert a world coordinate to a screen pixel position
+ws::Vec2i screen = view.toScreen(worldX, worldY, windowSize);
+</code></pre>
+<p><code>ws::Window</code> provides shorthand versions that supply the window size automatically:</p>
+<pre><code class="language-cpp">ws::Vec2i world  = window.toWorld(mouseX, mouseY);
+ws::Vec2i screen = window.toScreen(worldX, worldY);
+</code></pre>
+<hr />
+<h3 id="42-wstexture">4.2 <code>ws::Texture</code></h3>
+<p>An RAII wrapper around <code>Gdiplus::Bitmap</code>. Supports copy and move semantics.</p>
+<pre><code class="language-cpp">ws::Texture tex;
+tex.loadFromFile(&quot;image.png&quot;);
+
+ws::Texture tex2(&quot;image.png&quot;); // constructor shorthand
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loadFromFile(path)</code></td>
+<td><code>bool</code></td>
+<td>Loads PNG, JPG, BMP, GIF, or TIFF. Relative paths resolve from the executable's directory.</td>
+</tr>
+<tr>
+<td><code>loadFromMemory(buffer, size)</code></td>
+<td><code>bool</code></td>
+<td>Loads from a raw byte buffer in memory.</td>
+</tr>
+<tr>
+<td><code>loadFromBitmapPlus(bitmap)</code></td>
+<td><code>bool</code></td>
+<td>Copies from an existing <code>Gdiplus::Bitmap</code>.</td>
+</tr>
+<tr>
+<td><code>create(w, h, color)</code></td>
+<td><code>bool</code></td>
+<td>Creates a blank texture. Colour defaults to transparent.</td>
+</tr>
+<tr>
+<td><code>saveToFile(path)</code></td>
+<td><code>bool</code></td>
+<td>Saves to file. Format determined by extension (png/jpg/bmp/gif/tiff).</td>
+</tr>
+<tr>
+<td><code>isValid()</code></td>
+<td><code>bool</code></td>
+<td>Returns true if the bitmap pointer is non-null.</td>
+</tr>
+<tr>
+<td><code>getSize()</code></td>
+<td><code>ws::Vec2i</code></td>
+<td>Width and height in pixels.</td>
+</tr>
+<tr>
+<td><code>getPixel(x, y)</code></td>
+<td><code>Gdiplus::Color</code></td>
+<td>Reads a single pixel.</td>
+</tr>
+<tr>
+<td><code>setPixel(x, y, color)</code></td>
+<td><code>void</code></td>
+<td>Writes a single pixel.</td>
+</tr>
+</tbody>
+</table>
+<p><code>bitmap</code> is a public <code>Gdiplus::Bitmap*</code> available for direct GDI+ access when needed.</p>
+<hr />
+<h3 id="43-wsgif">4.3 <code>ws::GIF</code></h3>
+<p>Loads and plays animated GIFs frame by frame. Can also be built manually by adding frames in code.</p>
+<pre><code class="language-cpp">ws::GIF gif;
+gif.loadFromFile(&quot;animation.gif&quot;);
+gif.setLoop(true);
+gif.play();
+
+// In the game loop:
+ws::Texture&amp; frame = gif.update(); // advances the animation
+sprite.setTexture(frame, false);
+window.draw(sprite);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loadFromFile(path)</code></td>
+<td><code>bool</code></td>
+<td>Loads all frames and per-frame delays from a GIF file.</td>
+</tr>
+<tr>
+<td><code>addFrame(texture, msDelay)</code></td>
+<td><code>void</code></td>
+<td>Appends a frame and its display duration in milliseconds.</td>
+</tr>
+<tr>
+<td><code>play()</code></td>
+<td><code>void</code></td>
+<td>Starts or resumes playback from the current frame.</td>
+</tr>
+<tr>
+<td><code>pause()</code></td>
+<td><code>void</code></td>
+<td>Freezes on the current frame.</td>
+</tr>
+<tr>
+<td><code>stop()</code></td>
+<td><code>void</code></td>
+<td>Stops and rewinds to frame 0.</td>
+</tr>
+<tr>
+<td><code>update()</code></td>
+<td><code>ws::Texture&amp;</code></td>
+<td>Advances the animation based on elapsed time. Returns the current frame. <strong>Call once per game loop iteration.</strong></td>
+</tr>
+<tr>
+<td><code>getTexture()</code></td>
+<td><code>ws::Texture&amp;</code></td>
+<td>Returns the current frame without advancing.</td>
+</tr>
+<tr>
+<td><code>getFrame(index)</code></td>
+<td><code>ws::Texture*</code></td>
+<td>Direct access to a frame by index.</td>
+</tr>
+<tr>
+<td><code>getFrameCount()</code></td>
+<td><code>int</code></td>
+<td>Total number of frames.</td>
+</tr>
+<tr>
+<td><code>getCurrentFrame()</code></td>
+<td><code>int</code></td>
+<td>Index of the frame currently being shown.</td>
+</tr>
+<tr>
+<td><code>getStatus()</code></td>
+<td><code>string</code></td>
+<td><code>"playing"</code>, <code>"paused"</code>, or <code>"stopped"</code>.</td>
+</tr>
+<tr>
+<td><code>setLoop(bool)</code> / <code>getLoop()</code></td>
+<td></td>
+<td>Enable or disable looping.</td>
+</tr>
+<tr>
+<td><code>getFrameDelay(index)</code></td>
+<td><code>double</code></td>
+<td>Display duration of a frame in milliseconds.</td>
+</tr>
+<tr>
+<td><code>setFrameDelay(index, ms)</code></td>
+<td><code>bool</code></td>
+<td>Changes a frame's display duration.</td>
+</tr>
+<tr>
+<td><code>setFrame(index, texture)</code></td>
+<td><code>bool</code></td>
+<td>Replaces a frame's image.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="44-wsdrawable-base-class">4.4 <code>ws::Drawable</code> (base class)</h3>
+<p>Abstract base for all drawable objects. Provides position, size, rotation, scale, and hit-testing. You do not create <code>Drawable</code> objects directly — use the subclasses below.</p>
+<p><strong>Public data members:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x, y, z</code></td>
+<td><code>int</code></td>
+<td>World position.</td>
+</tr>
+<tr>
+<td><code>width, height</code></td>
+<td><code>int</code></td>
+<td>Logical size. Often set automatically by the subclass.</td>
+</tr>
+<tr>
+<td><code>scale</code></td>
+<td><code>ws::Vec2f</code></td>
+<td>Scale multipliers. Negative values flip the object.</td>
+</tr>
+<tr>
+<td><code>origin</code></td>
+<td><code>ws::Vec2i</code></td>
+<td>Pivot point for rotation and scale, in local coordinates.</td>
+</tr>
+<tr>
+<td><code>rotation</code></td>
+<td><code>float</code></td>
+<td>Rotation in degrees.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setPosition(x, y)</code> / <code>getPosition()</code></td>
+<td>World-space position.</td>
+</tr>
+<tr>
+<td><code>setSize(w, h)</code> / <code>getSize()</code></td>
+<td>Logical dimensions.</td>
+</tr>
+<tr>
+<td><code>setScale(sx, sy)</code> / <code>getScale()</code></td>
+<td>Scale.</td>
+</tr>
+<tr>
+<td><code>setOrigin(x, y)</code> / <code>getOrigin()</code></td>
+<td>Local pivot point.</td>
+</tr>
+<tr>
+<td><code>setRotation(deg)</code> / <code>getRotation()</code></td>
+<td>Rotation in degrees.</td>
+</tr>
+<tr>
+<td><code>getVisualWidth()</code> / <code>getVisualHeight()</code></td>
+<td>Actual pixel footprint accounting for scale.</td>
+</tr>
+<tr>
+<td><code>getBounds(left, top, right, bottom)</code></td>
+<td>Axis-aligned bounding box in world space, accounting for scale and rotation.</td>
+</tr>
+<tr>
+<td><code>contains(point)</code></td>
+<td><code>bool</code> — point-in-shape hit test.</td>
+</tr>
+<tr>
+<td><code>drawGlobal(graphics*)</code></td>
+<td>Applies the full transform then calls <code>draw()</code>. Called automatically by <code>ws::Window::draw()</code>.</td>
+</tr>
+<tr>
+<td><code>draw(graphics*)</code></td>
+<td><strong>Pure virtual.</strong> Override this to draw your content in local space.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="45-wssprite">4.5 <code>ws::Sprite</code></h3>
+<p>Draws a rectangular region of a <code>ws::Texture</code>. The region can be changed at any time, making it useful for spritesheet animation.</p>
+<pre><code class="language-cpp">ws::Texture tex(&quot;hero.png&quot;);
+ws::Sprite sprite(tex);
+sprite.setPosition(100, 100);
+sprite.setScale(2.0f, 2.0f);
+window.draw(sprite);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setTexture(texture, resize)</code></td>
+<td>Attaches a texture. If <code>resize</code> is <code>true</code> (default), width/height are set to match the texture.</td>
+</tr>
+<tr>
+<td><code>setTextureRect(rect)</code></td>
+<td>Crops the source region (left, top, width, height). Use for spritesheet animation.</td>
+</tr>
+<tr>
+<td><code>getTextureRect()</code> → <code>ws::IntRect</code></td>
+<td>Returns the current source crop.</td>
+</tr>
+<tr>
+<td><code>getTexture()</code></td>
+<td>Returns the attached texture reference.</td>
+</tr>
+<tr>
+<td><code>hasTexture()</code></td>
+<td><code>bool</code> — whether a texture is attached.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Spritesheet example:</strong></p>
+<pre><code class="language-cpp">ws::Texture sheet(&quot;spritesheet.png&quot;);
+ws::Sprite sprite(sheet);
+
+ws::ShiftData anim;
+anim.delay = 0.1f;
+anim.add(0,   0, 64, 64); // frame 0: x=0
+anim.add(64,  0, 64, 64); // frame 1: x=64
+anim.add(128, 0, 64, 64); // frame 2: x=128
+
+while (window.isOpen()) {
+    window.clear();
+    sprite.setTextureRect(ws::Shift(anim)); // advance and apply frame
+    window.draw(sprite);
+    window.display();
+}
+</code></pre>
+<hr />
+<h3 id="46-wsline">4.6 <code>ws::Line</code></h3>
+<p>A line segment between two points.</p>
+<pre><code class="language-cpp">ws::Line line({0, 0}, {400, 300}, 2, Gdiplus::Color(255, 255, 0, 0));
+window.draw(line);
+</code></pre>
+<p><strong>Public data members:</strong> <code>start</code> (<code>ws::Vec2i</code>), <code>end</code> (<code>ws::Vec2i</code>), <code>color</code> (<code>Gdiplus::Color</code>), <code>width</code> (<code>int</code> — pen thickness in pixels).</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>intersects(Line&amp; other)</code></td>
+<td><code>bool</code> — proper segment-vs-segment intersection test.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="47-wsfont-wstext">4.7 <code>ws::Font</code> &amp; <code>ws::Text</code></h3>
+<p><code>ws::Font</code> loads a typeface from a file or from the system. <code>ws::Text</code> is a <code>Drawable</code> that renders styled text using a <code>ws::Font</code>.</p>
+<pre><code class="language-cpp">ws::Font font;
+font.loadFromFile(&quot;myfont.ttf&quot;);
+// — or —
+font.loadFromSystem(&quot;Consolas&quot;);
+
+ws::Text label(font);
+label.setString(&quot;Hello, World!&quot;);
+label.setCharacterSize(24);
+label.setFillColor(Gdiplus::Color(255, 255, 255, 255));
+label.setBorderColor(Gdiplus::Color(255, 0, 0, 0));
+label.setBorderWidth(2);
+label.setPosition(50, 50);
+window.draw(label);
+</code></pre>
+<p><strong><code>ws::Font</code> methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loadFromFile(path)</code></td>
+<td><code>bool</code></td>
+<td>Loads a <code>.ttf</code> or <code>.otf</code> font file.</td>
+</tr>
+<tr>
+<td><code>loadFromSystem(name)</code></td>
+<td><code>bool</code></td>
+<td>Loads by system font name, e.g. <code>"Arial"</code>, <code>"Segoe UI"</code>.</td>
+</tr>
+<tr>
+<td><code>isValid()</code></td>
+<td><code>bool</code></td>
+<td>True if the font loaded successfully.</td>
+</tr>
+<tr>
+<td><code>getName()</code></td>
+<td><code>string</code></td>
+<td>The font family name.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>ws::Text</code> methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setFont(font)</code></td>
+<td>Attaches a <code>ws::Font</code>.</td>
+</tr>
+<tr>
+<td><code>setString(str)</code> / <code>getString()</code></td>
+<td>The text to display.</td>
+</tr>
+<tr>
+<td><code>setCharacterSize(px)</code> / <code>getCharacterSize()</code></td>
+<td>Font size in pixels.</td>
+</tr>
+<tr>
+<td><code>setStyle(Gdiplus::FontStyle)</code></td>
+<td><code>FontStyleRegular</code>, <code>FontStyleBold</code>, <code>FontStyleItalic</code>, <code>FontStyleUnderline</code>, <code>FontStyleStrikeout</code>.</td>
+</tr>
+<tr>
+<td><code>setFillColor(color)</code></td>
+<td>Text fill colour.</td>
+</tr>
+<tr>
+<td><code>setBorderColor(color)</code></td>
+<td>Outline colour.</td>
+</tr>
+<tr>
+<td><code>setBorderWidth(px)</code></td>
+<td>Outline thickness. Set to <code>0</code> for no outline.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>After <code>draw()</code> runs, the <code>width</code> and <code>height</code> members on the <code>Text</code> object are updated to reflect the measured text bounds. This is useful for layout calculations.</p>
+</blockquote>
+<hr />
+<h3 id="48-wspoly">4.8 <code>ws::Poly</code></h3>
+<p>A filled or outlined polygon with any number of vertices. Supports solid colour, texture mapping, open/closed modes, and collision testing.</p>
+<pre><code class="language-cpp">ws::Poly poly;
+poly.addVertex(0,   0);
+poly.addVertex(100, 0);
+poly.addVertex(50,  100);
+poly.setFillColor(Gdiplus::Color(255, 0, 150, 255));
+poly.setBorderColor(Gdiplus::Color(255, 255, 255, 255));
+poly.setBorderWidth(2);
+window.draw(poly);
+</code></pre>
+<p><strong>Public data:</strong> <code>vertices</code> (<code>std::vector&lt;ws::Vec2i&gt;</code>) — can be read or modified directly.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addVertex(x, y)</code></td>
+<td>Appends a vertex.</td>
+</tr>
+<tr>
+<td><code>clear()</code></td>
+<td>Removes all vertices.</td>
+</tr>
+<tr>
+<td><code>vertexCount()</code></td>
+<td>Number of vertices.</td>
+</tr>
+<tr>
+<td><code>isValid()</code></td>
+<td>True if there are at least 3 vertices.</td>
+</tr>
+<tr>
+<td><code>getCentroid()</code></td>
+<td>Average position of all vertices.</td>
+</tr>
+<tr>
+<td><code>getBoundingRect()</code></td>
+<td>Axis-aligned bounding box.</td>
+</tr>
+<tr>
+<td><code>contains(point)</code></td>
+<td>Point-in-polygon test using ray casting.</td>
+</tr>
+<tr>
+<td><code>intersects(Line&amp;)</code></td>
+<td>True if any polygon edge intersects the line.</td>
+</tr>
+<tr>
+<td><code>intersects(Poly&amp;)</code></td>
+<td>True if the two polygons overlap.</td>
+</tr>
+<tr>
+<td><code>setFillColor(color)</code> / <code>getFillColor()</code></td>
+<td>Interior fill colour.</td>
+</tr>
+<tr>
+<td><code>setBorderColor(color)</code> / <code>getBorderColor()</code></td>
+<td>Edge colour.</td>
+</tr>
+<tr>
+<td><code>setBorderWidth(px)</code> / <code>getBorderWidth()</code></td>
+<td>Edge thickness in pixels.</td>
+</tr>
+<tr>
+<td><code>setFilled(bool)</code></td>
+<td>Whether to fill the interior. Default: <code>true</code>.</td>
+</tr>
+<tr>
+<td><code>setClosed(bool)</code></td>
+<td>Whether to draw the closing edge from the last vertex back to the first. Default: <code>true</code>.</td>
+</tr>
+<tr>
+<td><code>setTexture(texture)</code></td>
+<td>Maps a <code>ws::Texture</code> over the polygon using UV coordinates.</td>
+</tr>
+<tr>
+<td><code>removeTexture()</code></td>
+<td>Reverts to solid colour rendering.</td>
+</tr>
+<tr>
+<td><code>setUV(vertexIndex, u, v)</code></td>
+<td>Sets a UV coordinate (0.0–1.0 range) for a specific vertex.</td>
+</tr>
+<tr>
+<td><code>updateTexture()</code></td>
+<td>Forces the internal texture cache to regenerate on the next draw.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="49-wsradial">4.9 <code>ws::Radial</code></h3>
+<p>A regular n-sided polygon, useful as a circle approximation.</p>
+<pre><code class="language-cpp">ws::Radial circle;
+circle.setRadius(50);
+circle.setPointCount(32);      // more points = smoother
+circle.setPosition(200, 200); // sets the center
+circle.setFillColor(Gdiplus::Color(255, 0, 200, 100));
+window.draw(circle);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setRadius(px)</code></td>
+<td>Circle radius in pixels.</td>
+</tr>
+<tr>
+<td><code>setPointCount(n)</code></td>
+<td>Number of polygon vertices. Default: <code>500</code>.</td>
+</tr>
+<tr>
+<td><code>setPosition(x, y)</code></td>
+<td>Sets the <strong>center</strong> position.</td>
+</tr>
+<tr>
+<td><code>move(dx, dy)</code></td>
+<td>Translates the center by a delta.</td>
+</tr>
+<tr>
+<td><code>setFillColor(color)</code></td>
+<td>Interior colour.</td>
+</tr>
+<tr>
+<td><code>setBorderColor(color)</code></td>
+<td>Edge colour.</td>
+</tr>
+<tr>
+<td><code>setBorderWidth(px)</code></td>
+<td>Edge thickness.</td>
+</tr>
+<tr>
+<td><code>getRadius()</code></td>
+<td>Returns the current radius.</td>
+</tr>
+<tr>
+<td><code>getPosition()</code></td>
+<td>Returns the center position.</td>
+</tr>
+<tr>
+<td><code>getPointCount()</code></td>
+<td>Returns the number of vertices.</td>
+</tr>
+<tr>
+<td><code>contains(point)</code></td>
+<td><code>bool</code> — circular hit test (faster than the polygon version).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="410-wsround">4.10 <code>ws::Round</code></h3>
+<p>An axis-aligned ellipse.</p>
+<pre><code class="language-cpp">ws::Round ellipse;
+ellipse.setSize(200, 100);
+ellipse.setPosition(300, 200);
+ellipse.setFillColor(Gdiplus::Color(255, 50, 150, 200));
+ellipse.setBorderColor(Gdiplus::Color(255, 255, 255, 255));
+ellipse.setBorderWidth(3);
+window.draw(ellipse);
+</code></pre>
+<p>Size and position are set through the inherited <code>Drawable</code> members (<code>width</code>, <code>height</code>, <code>x</code>, <code>y</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setFillColor(color)</code></td>
+<td>Interior colour.</td>
+</tr>
+<tr>
+<td><code>setBorderColor(color)</code></td>
+<td>Outline colour.</td>
+</tr>
+<tr>
+<td><code>setBorderWidth(px)</code></td>
+<td>Outline thickness.</td>
+</tr>
+<tr>
+<td><code>contains(x, y)</code> or <code>contains(Vec2i)</code></td>
+<td>Ellipse-equation hit test.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="411-wsshiftdata-wsshift">4.11 <code>ws::ShiftData</code> &amp; <code>ws::Shift</code></h3>
+<p>A lightweight frame-based animator for spritesheet textures. Each frame is defined as a rectangle on the sheet. The free function <code>ws::Shift()</code> returns the correct rectangle for the current time.</p>
+<pre><code class="language-cpp">ws::ShiftData anim;
+anim.delay = 0.12f; // seconds per frame
+anim.add(0,   0, 32, 32); // frame 0
+anim.add(32,  0, 32, 32); // frame 1
+anim.add(64,  0, 32, 32); // frame 2
+
+// In the game loop:
+ws::IntRect frameRect = ws::Shift(anim);
+sprite.setTextureRect(frameRect);
+</code></pre>
+<p><strong><code>ws::ShiftData</code> public members:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>delay</code></td>
+<td><code>float</code></td>
+<td>Seconds to display each frame.</td>
+</tr>
+<tr>
+<td><code>currentframe</code></td>
+<td><code>int</code></td>
+<td>Index of the current frame (read for inspection).</td>
+</tr>
+<tr>
+<td><code>ended</code></td>
+<td><code>bool</code></td>
+<td>Becomes <code>true</code> after the last frame has been shown. Resets automatically on the next cycle.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>ws::ShiftData</code> methods:</strong>
+- <code>add(left, top, width, height)</code> — appends a frame rectangle.
+- <code>add(ws::IntRect)</code> — appends a frame rectangle from a rect object.</p>
+<p><strong><code>ws::Shift(ShiftData&amp;)</code></strong> — free function. Call once per game loop frame. Returns the <code>ws::IntRect</code> for the current frame and advances the timer.</p>
+<hr />
+<h2 id="5-window-system">5. Window System</h2>
+<h3 id="51-wswindow">5.1 <code>ws::Window</code></h3>
+<p>The main application window. Manages the GDI+ back buffer, the view/camera, child controls, and the message loop.</p>
+<pre><code class="language-cpp">ws::Window window(800, 600, &quot;My App&quot;);
+// optional: pass Win32 style flags
+ws::Window window(800, 600, &quot;My App&quot;, WS_OVERLAPPEDWINDOW, 0);
+// deferred creation:
+ws::Window window;
+window.create(800, 600, &quot;My App&quot;);
+</code></pre>
+<p><strong>Standard game loop:</strong></p>
+<pre><code class="language-cpp">while (window.isOpen()) {
+    MSG msg;
+    while (window.pollEvent(msg)) {
+        // handle input or UI events
+    }
+
+    window.clear(Gdiplus::Color(255, 30, 30, 30));
+    window.draw(mySprite);
+    window.draw(myText);
+    window.display();
+}
+</code></pre>
+<h3 id="drawing">Drawing</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clear(color)</code></td>
+<td>Clears and recreates the back buffer. Default colour: opaque black.</td>
+</tr>
+<tr>
+<td><code>draw(Drawable&amp;)</code></td>
+<td>Draws any <code>Drawable</code> subclass through the current view transform.</td>
+</tr>
+<tr>
+<td><code>display()</code></td>
+<td>Blits the back buffer to the screen. Call once per frame after all drawing.</td>
+</tr>
+<tr>
+<td><code>setPixel(x, y, hue)</code></td>
+<td>Writes a pixel directly to the back buffer.</td>
+</tr>
+<tr>
+<td><code>getPixel(x, y)</code></td>
+<td>Reads a pixel from the back buffer. Returns <code>ws::Hue</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="window-state">Window State</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>isOpen()</code></td>
+<td>Pumps the message queue and returns <code>false</code> when the window has been closed.</td>
+</tr>
+<tr>
+<td><code>pollEvent(MSG&amp;)</code></td>
+<td>Dequeues one pending message. Returns <code>false</code> when the queue is empty.</td>
+</tr>
+<tr>
+<td><code>close()</code></td>
+<td>Destroys the window. <code>isOpen()</code> will return <code>false</code> next iteration.</td>
+</tr>
+<tr>
+<td><code>setTitle(str)</code> / <code>getTitle()</code></td>
+<td>Window title bar text.</td>
+</tr>
+<tr>
+<td><code>setSize(w, h)</code> / <code>getSize()</code></td>
+<td>Client area size in pixels.</td>
+</tr>
+<tr>
+<td><code>setPosition(x, y)</code> / <code>getPosition()</code></td>
+<td>Screen position of the client area.</td>
+</tr>
+<tr>
+<td><code>setVisible(bool)</code> / <code>getVisible()</code></td>
+<td>Show or hide the window.</td>
+</tr>
+<tr>
+<td><code>setFocus()</code> / <code>hasFocus()</code></td>
+<td>Keyboard focus.</td>
+</tr>
+<tr>
+<td><code>setFullscreen(bool)</code> / <code>getFullscreen()</code></td>
+<td>Toggle borderless fullscreen. The previous size and style are restored when exiting.</td>
+</tr>
+<tr>
+<td><code>setChromaKey(hue)</code></td>
+<td>Makes a specific colour transparent using a layered window.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="view-coordinate-conversion">View &amp; Coordinate Conversion</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setView(view)</code> / <code>getView()</code></td>
+<td>Replaces the window's <code>ws::View</code>.</td>
+</tr>
+<tr>
+<td><code>toWorld(x, y)</code></td>
+<td>Converts screen pixel coordinates to world coordinates.</td>
+</tr>
+<tr>
+<td><code>toScreen(x, y)</code></td>
+<td>Converts world coordinates to screen pixel coordinates.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="win32-styles">Win32 Styles</h3>
+<pre><code class="language-cpp">window.addStyle(WS_THICKFRAME);
+window.removeStyle(WS_MAXIMIZEBOX);
+window.addExStyle(WS_EX_TOOLWINDOW);
+window.hasStyle(WS_CAPTION);   // returns bool
+window.hasExStyle(WS_EX_TOPMOST);
+</code></pre>
+<h3 id="child-controls">Child Controls</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addChild(child)</code></td>
+<td>Registers a child control and calls <code>child.init(*this)</code>, which creates its HWND.</td>
+</tr>
+<tr>
+<td><code>removeChild(child)</code></td>
+<td>Unregisters the child without destroying its HWND.</td>
+</tr>
+<tr>
+<td><code>hasChild(child)</code></td>
+<td><code>bool</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="public-members">Public Members</h3>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hwnd</code></td>
+<td><code>HWND</code></td>
+<td>The underlying Win32 window handle.</td>
+</tr>
+<tr>
+<td><code>view</code></td>
+<td><code>ws::View</code></td>
+<td>The window's camera.</td>
+</tr>
+<tr>
+<td><code>backBuffer</code></td>
+<td><code>ws::Texture</code></td>
+<td>The off-screen render target.</td>
+</tr>
+<tr>
+<td><code>canvas</code></td>
+<td><code>Gdiplus::Graphics*</code></td>
+<td>The GDI+ graphics context for the back buffer. Valid between <code>clear()</code> and <code>display()</code>.</td>
+</tr>
+<tr>
+<td><code>children</code></td>
+<td><code>std::vector&lt;ws::Child*&gt;</code></td>
+<td>All registered child controls.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="52-wscursor">5.2 <code>ws::Cursor</code></h3>
+<p>A custom mouse cursor loaded from a system type, a file, or a texture.</p>
+<pre><code class="language-cpp">ws::Cursor cursor(ws::Cursor::Type::Hand);
+window.setCursor(cursor);
+</code></pre>
+<p><strong><code>ws::Cursor::Type</code> values:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Arrow</code></td>
+<td>Standard arrow</td>
+</tr>
+<tr>
+<td><code>IBeam</code></td>
+<td>Text input caret</td>
+</tr>
+<tr>
+<td><code>Wait</code></td>
+<td>Busy/hourglass</td>
+</tr>
+<tr>
+<td><code>Cross</code></td>
+<td>Crosshair</td>
+</tr>
+<tr>
+<td><code>Hand</code></td>
+<td>Pointing hand</td>
+</tr>
+<tr>
+<td><code>SizeAll</code></td>
+<td>Four-direction move</td>
+</tr>
+<tr>
+<td><code>SizeNS</code></td>
+<td>Vertical resize</td>
+</tr>
+<tr>
+<td><code>SizeWE</code></td>
+<td>Horizontal resize</td>
+</tr>
+<tr>
+<td><code>SizeNWSE</code></td>
+<td>Diagonal resize (↘)</td>
+</tr>
+<tr>
+<td><code>SizeNESW</code></td>
+<td>Diagonal resize (↙)</td>
+</tr>
+<tr>
+<td><code>No</code></td>
+<td>Prohibited</td>
+</tr>
+<tr>
+<td><code>Help</code></td>
+<td>Arrow + question mark</td>
+</tr>
+<tr>
+<td><code>AppStarting</code></td>
+<td>Arrow + busy</td>
+</tr>
+<tr>
+<td><code>UpArrow</code></td>
+<td>Upward arrow</td>
+</tr>
+<tr>
+<td><code>Pin</code></td>
+<td>Pin (Windows 7+)</td>
+</tr>
+<tr>
+<td><code>Person</code></td>
+<td>Person silhouette (Windows 8+)</td>
+</tr>
+<tr>
+<td><code>Copy</code></td>
+<td>OLE drag-copy</td>
+</tr>
+<tr>
+<td><code>Move</code></td>
+<td>OLE drag-move</td>
+</tr>
+<tr>
+<td><code>Link</code></td>
+<td>OLE drag-link</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loadAs(Type)</code></td>
+<td>Loads a system cursor by type.</td>
+</tr>
+<tr>
+<td><code>loadFromFile(path)</code></td>
+<td>Loads a <code>.cur</code> or <code>.ani</code> (animated) cursor from a file.</td>
+</tr>
+<tr>
+<td><code>loadFromTexture(texture, hotX, hotY)</code></td>
+<td>Creates a cursor from a <code>ws::Texture</code>. <code>hotX</code>/<code>hotY</code> is the pixel that acts as the click point.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="53-wsdroptarget">5.3 <code>ws::DropTarget</code></h3>
+<p>Implements OLE drag-and-drop into a <code>ws::Window</code>. Dropped data is queued and retrieved via <code>pollDrop()</code>.</p>
+<pre><code class="language-cpp">ws::DropTarget dropTarget;
+dropTarget.setWindow(window);      // must be called first
+dropTarget.acceptType(&quot;files&quot;);
+dropTarget.acceptType(&quot;images&quot;);
+dropTarget.acceptType(&quot;text&quot;);
+</code></pre>
+<p><strong>Registration and type control:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setWindow(window)</code></td>
+<td>Registers the drop target with the window via <code>RegisterDragDrop</code>. Must be called before any other method.</td>
+</tr>
+<tr>
+<td><code>acceptType(type, effect)</code></td>
+<td>Enables a drop type. <code>type</code> is <code>"files"</code>, <code>"images"</code>, or <code>"text"</code>. <code>effect</code> defaults to <code>ws::DropEffect::Copy</code>.</td>
+</tr>
+<tr>
+<td><code>rejectType(type)</code></td>
+<td>Stops accepting a type.</td>
+</tr>
+<tr>
+<td><code>rejectAll()</code></td>
+<td>Disables all drop types.</td>
+</tr>
+<tr>
+<td><code>onlyAcceptIf(type, fn)</code></td>
+<td>Conditionally accept drops: <code>fn</code> is a <code>std::function&lt;bool()&gt;</code> checked on each drag-over event.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>ws::DropEffect</code> enum:</strong> <code>None</code>, <code>Copy</code>, <code>Move</code>, <code>Link</code></p>
+<p><strong>Polling for drops:</strong></p>
+<pre><code class="language-cpp">ws::ClipData data;
+ws::DropEffect effect;
+while (dropTarget.pollDrop(data, effect)) {
+    std::string              text  = data.getText();
+    ws::Texture              image = data.getTexture();
+    std::vector&lt;std::string&gt; files = data.getFiles();
+}
+</code></pre>
+<p><code>pollDrop</code> returns <code>false</code> when there are no pending drops. Call it inside your event loop.</p>
+<hr />
+<h2 id="6-child-controls">6. Child Controls</h2>
+<p>All controls inherit from <code>ws::Child</code>. Create one, configure it, then pass it to <code>window.addChild()</code> to bring it to life.</p>
+<blockquote>
+<p>Controls can have their position, size, and text set either before or after <code>addChild()</code>.</p>
+</blockquote>
+<h3 id="61-wschild-base">6.1 <code>ws::Child</code> (base)</h3>
+<p><strong>Public data members:</strong> <code>hwnd</code>, <code>controlID</code>, <code>backgroundColor</code>, <code>textColor</code>, <code>borderColor</code>, <code>style</code>, <code>textStyle</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setPosition(x, y)</code> / <code>getPosition()</code></td>
+<td>Control position in client-area coordinates.</td>
+</tr>
+<tr>
+<td><code>setSize(w, h)</code> / <code>getSize()</code></td>
+<td>Control dimensions.</td>
+</tr>
+<tr>
+<td><code>setText(str)</code> / <code>getText()</code></td>
+<td>Control label or content (UTF-8). Reads back live from the HWND if available.</td>
+</tr>
+<tr>
+<td><code>setFont(font, textSettings)</code></td>
+<td>Sets the displayed font using a <code>ws::Font</code> and a <code>ws::Text</code> for size/style settings.</td>
+</tr>
+<tr>
+<td><code>addStyle(DWORD)</code></td>
+<td>Adds a Win32 window style flag.</td>
+</tr>
+<tr>
+<td><code>removeStyle(DWORD)</code></td>
+<td>Removes a style flag.</td>
+</tr>
+<tr>
+<td><code>hasStyle(DWORD)</code></td>
+<td>Returns <code>true</code> if the flag is currently set.</td>
+</tr>
+<tr>
+<td><code>setFillColor(COLORREF)</code></td>
+<td>Background colour.</td>
+</tr>
+<tr>
+<td><code>setTextColor(COLORREF)</code></td>
+<td>Text colour.</td>
+</tr>
+<tr>
+<td><code>setBorderColor(COLORREF)</code></td>
+<td>Border colour.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="62-wsbutton">6.2 <code>ws::Button</code></h3>
+<pre><code class="language-cpp">ws::Button btn;
+btn.setText(&quot;Click Me&quot;);
+btn.setSize(120, 40);
+btn.setPosition(10, 10);
+window.addChild(btn);
+
+MSG msg;
+while (window.pollEvent(msg)) {
+    if (btn.isPressed(msg)) {
+        // button was clicked
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>isPressed(MSG&amp;)</code></td>
+<td>Returns <code>true</code> on the frame the button receives a click (<code>BN_CLICKED</code>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="63-wstextbox">6.3 <code>ws::TextBox</code></h3>
+<p>A multiline, scrollable text input field.</p>
+<pre><code class="language-cpp">ws::TextBox box;
+box.setSize(300, 100);
+box.setPosition(10, 60);
+box.setCharacterLimit(500); // 0 = unlimited
+window.addChild(box);
+
+std::string content = box.getText();
+box.setText(&quot;prefilled content&quot;);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setCharacterLimit(n)</code></td>
+<td>Maximum number of characters. <code>0</code> = unlimited.</td>
+</tr>
+<tr>
+<td><code>getFocus()</code></td>
+<td><code>bool</code> — true when the textbox has keyboard focus.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="64-wslabel">6.4 <code>ws::Label</code></h3>
+<p>Non-interactive static text.</p>
+<pre><code class="language-cpp">ws::Label lbl;
+lbl.setText(&quot;Status: Ready&quot;);
+lbl.setSize(200, 24);
+lbl.setPosition(10, 170);
+window.addChild(lbl);
+</code></pre>
+<p>No additional methods beyond <code>ws::Child</code>.</p>
+<hr />
+<h3 id="65-wsslider">6.5 <code>ws::Slider</code></h3>
+<p>A horizontal or vertical trackbar.</p>
+<pre><code class="language-cpp">ws::Slider slider;
+slider.setSize(300, 30);
+slider.setPosition(10, 200);
+window.addChild(slider);
+slider.setRange(0, 100);
+slider.setSlidePosition(50);
+
+MSG msg;
+while (window.pollEvent(msg)) {
+    if (slider.getScroll(msg)) {
+        int value = slider.getSlidePosition();
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setRange(min, max)</code></td>
+<td>Sets the minimum and maximum values.</td>
+</tr>
+<tr>
+<td><code>setSlidePosition(pos)</code></td>
+<td>Moves the thumb programmatically.</td>
+</tr>
+<tr>
+<td><code>getSlidePosition()</code></td>
+<td>Returns the current thumb position.</td>
+</tr>
+<tr>
+<td><code>getScroll(MSG&amp;)</code></td>
+<td><code>bool</code> — fires whenever the thumb moves.</td>
+</tr>
+<tr>
+<td><code>setHorizontal()</code></td>
+<td>Switch to horizontal orientation.</td>
+</tr>
+<tr>
+<td><code>setVertical()</code></td>
+<td>Switch to vertical orientation.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="66-wscombobox">6.6 <code>ws::ComboBox</code></h3>
+<p>A dropdown selection list, with optional free-text editing.</p>
+<pre><code class="language-cpp">ws::ComboBox combo;
+combo.setSize(200, 200); // the height controls dropdown list space
+combo.setPosition(10, 240);
+combo.addItem(&quot;Option A&quot;);
+combo.addItem(&quot;Option B&quot;);
+combo.addItem(&quot;Option C&quot;);
+window.addChild(combo);
+
+MSG msg;
+while (window.pollEvent(msg)) {
+    if (combo.selectionChanged(msg)) {
+        std::string selected = combo.getSelectedText();
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addItem(str)</code></td>
+<td>Appends one list item. Safe to call before <code>addChild()</code>.</td>
+</tr>
+<tr>
+<td><code>addItems(vector&lt;string&gt;)</code></td>
+<td>Appends multiple items at once.</td>
+</tr>
+<tr>
+<td><code>removeItem(index)</code></td>
+<td>Removes the item at the given index.</td>
+</tr>
+<tr>
+<td><code>clear()</code></td>
+<td>Removes all items.</td>
+</tr>
+<tr>
+<td><code>getSelectedIndex()</code></td>
+<td>Returns the selected index, or <code>-1</code> if nothing is selected.</td>
+</tr>
+<tr>
+<td><code>setSelectedIndex(n)</code></td>
+<td>Selects an item programmatically.</td>
+</tr>
+<tr>
+<td><code>getSelectedText()</code></td>
+<td>Text of the selected list item.</td>
+</tr>
+<tr>
+<td><code>getItemText(index)</code></td>
+<td>Text of any item by index.</td>
+</tr>
+<tr>
+<td><code>getItemCount()</code></td>
+<td>Total number of items.</td>
+</tr>
+<tr>
+<td><code>getEditText()</code></td>
+<td>Text currently shown in the editable field (not necessarily a list item).</td>
+</tr>
+<tr>
+<td><code>setEditText(str)</code></td>
+<td>Sets the editable field's text.</td>
+</tr>
+<tr>
+<td><code>selectionChanged(MSG&amp;)</code></td>
+<td><code>bool</code> — fires when the user picks a different item.</td>
+</tr>
+<tr>
+<td><code>setDropdownStyle(allowEdit)</code></td>
+<td><code>true</code> = editable combo (<code>CBS_DROPDOWN</code>), <code>false</code> = selection only (<code>CBS_DROPDOWNLIST</code>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-menus">7. Menus</h2>
+<h3 id="71-wsmenu-wsdropdown">7.1 <code>ws::Menu</code> &amp; <code>ws::Dropdown</code></h3>
+<p>A classic Windows menu bar attached to a window.</p>
+<pre><code class="language-cpp">// Build the dropdowns
+ws::Dropdown fileMenu(1, &quot;File&quot;);
+fileMenu.addItem(101, MF_STRING, &quot;Open&quot;);
+fileMenu.addItem(102, MF_STRING, &quot;Save&quot;);
+fileMenu.addItem(0,   MF_SEPARATOR, &quot;&quot;);
+fileMenu.addItem(103, MF_STRING, &quot;Exit&quot;);
+
+ws::Dropdown editMenu(2, &quot;Edit&quot;);
+editMenu.addItem(201, MF_STRING, &quot;Copy&quot;);
+editMenu.addItem(202, MF_STRING, &quot;Paste&quot;);
+
+// Attach to the window
+ws::Menu menuBar;
+menuBar.addDropdown(fileMenu);
+menuBar.addDropdown(editMenu);
+menuBar.setWindow(window);
+
+// Handle commands in the event loop
+MSG msg;
+while (window.pollEvent(msg)) {
+    int cmd = menuBar.getEvent(msg); // returns item ID, or -1
+    if (cmd == 101) { /* Open */ }
+    if (cmd == 103) { window.close(); }
+}
+</code></pre>
+<p><strong><code>ws::Dropdown</code> constructor:</strong> <code>Dropdown(id, displayName)</code></p>
+<table>
+<thead>
+<tr>
+<th><code>Dropdown</code> Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addItem(id, type, name)</code></td>
+<td>Adds an item. <code>type</code> is a Win32 flag: <code>MF_STRING</code>, <code>MF_SEPARATOR</code>, <code>MF_GRAYED</code>, etc.</td>
+</tr>
+<tr>
+<td><code>addSubmenu(Dropdown&amp;)</code></td>
+<td>Nests another <code>Dropdown</code> as a submenu.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>ws::Menu</code> methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addDropdown(Dropdown&amp;)</code></td>
+<td>Appends a top-level dropdown to the menu bar.</td>
+</tr>
+<tr>
+<td><code>setWindow(window)</code></td>
+<td>Attaches the menu bar to a window via <code>SetMenu</code>.</td>
+</tr>
+<tr>
+<td><code>getEvent(MSG&amp;)</code></td>
+<td>Returns the selected item ID on a <code>WM_COMMAND</code> message, otherwise <code>-1</code>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="72-wsclickmenu">7.2 <code>ws::ClickMenu</code></h3>
+<p>A right-click context menu that appears at the cursor position.</p>
+<pre><code class="language-cpp">ws::ClickMenu ctx;
+ctx.init(window);
+ctx.addItem(&quot;Copy&quot;);
+ctx.addItem(&quot;Paste&quot;);
+ctx.addItem(&quot;Delete&quot;);
+
+MSG msg;
+while (window.pollEvent(msg)) {
+    if (msg.message == WM_RBUTTONUP) {
+        ws::Vec2i mouse = ws::Global::getMousePos(window);
+        ctx.show(mouse);
+        int cmd = ctx.getCommand(); // 1-based index, 0 if dismissed
+        if (cmd == 1) { /* Copy  */ }
+        if (cmd == 2) { /* Paste */ }
+        if (cmd == 3) { /* Delete */ }
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>init(window)</code></td>
+<td>Associates with a parent window. Required before <code>show()</code>.</td>
+</tr>
+<tr>
+<td><code>addItem(str)</code></td>
+<td>Appends an item.</td>
+</tr>
+<tr>
+<td><code>removeItem(str)</code></td>
+<td>Removes the first matching item by name.</td>
+</tr>
+<tr>
+<td><code>setList(vector&lt;string&gt;)</code></td>
+<td>Replaces all items at once.</td>
+</tr>
+<tr>
+<td><code>getList()</code></td>
+<td>Returns the current item list.</td>
+</tr>
+<tr>
+<td><code>show(mousePos)</code></td>
+<td>Displays the popup at the given client coordinates. Blocks until the user selects or dismisses.</td>
+</tr>
+<tr>
+<td><code>getCommand()</code></td>
+<td>Returns the 1-based index of the last selected item, or <code>0</code> if dismissed.</td>
+</tr>
+<tr>
+<td><code>addFlag(DWORD)</code> / <code>removeFlag(DWORD)</code> / <code>getFlags()</code></td>
+<td>Modify <code>TrackPopupMenu</code> flags, e.g. <code>TPM_RIGHTBUTTON</code>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-clipboard">8. Clipboard</h2>
+<p>Winsimple creates a global <code>ws::Clipboard</code> instance called <code>ws::clipboard</code> automatically. You do not need to construct one.</p>
+<pre><code class="language-cpp">// --- Writing ---
+ws::clipboard.copyText(&quot;Hello, clipboard!&quot;);
+ws::clipboard.copyTexture(myTexture);
+ws::clipboard.copyTexture(myTexture, {10, 10, 200, 150}); // copy a region
+ws::clipboard.copyFile(&quot;C:/path/to/file.png&quot;);
+ws::clipboard.copyFiles({&quot;file1.png&quot;, &quot;file2.png&quot;});
+ws::clipboard.clear();
+
+// --- Reading ---
+ws::ClipData data = ws::clipboard.paste();
+std::string              text  = data.getText();
+ws::Texture              image = data.getTexture();
+std::vector&lt;std::string&gt; files = data.getFiles();
+
+// --- Checking before reading ---
+if (ws::clipboard.hasText())    { ... }
+if (ws::clipboard.hasTexture()) { ... }
+if (ws::clipboard.hasFiles())   { ... }
+</code></pre>
+<p><code>ws::ClipData</code> is a plain data container with <code>getText()</code>, <code>getTexture()</code>, <code>getFiles()</code> getters and matching setters.</p>
+<hr />
+<h2 id="9-file-dialogs">9. File Dialogs</h2>
+<h3 id="wsfilewindow"><code>ws::FileWindow</code></h3>
+<p>Standard open/save file dialogs.</p>
+<pre><code class="language-cpp">ws::FileWindow dlg;
+dlg.setTitle(&quot;Choose an image&quot;);
+
+if (dlg.open(&amp;window)) {
+    std::string path = dlg.getFileName();
+    texture.loadFromFile(path);
+}
+
+dlg.setFileName(&quot;output.png&quot;); // suggest a default filename
+if (dlg.save(&amp;window)) {
+    texture.saveToFile(dlg.getFileName());
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setTitle(str)</code> / <code>getTitle()</code></td>
+<td>Dialog title.</td>
+</tr>
+<tr>
+<td><code>setFileName(str)</code> / <code>getFileName()</code></td>
+<td>Pre-fill the filename field / retrieve the result.</td>
+</tr>
+<tr>
+<td><code>addFlag(DWORD)</code> / <code>removeFlag(DWORD)</code> / <code>getFlags()</code></td>
+<td>Win32 <code>OFN_*</code> flags.</td>
+</tr>
+<tr>
+<td><code>open(window*)</code></td>
+<td>Shows the Open dialog. Returns <code>true</code> on confirm, <code>false</code> on cancel.</td>
+</tr>
+<tr>
+<td><code>save(window*)</code></td>
+<td>Shows the Save dialog. Automatically adds <code>OFN_OVERWRITEPROMPT</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Always pass <code>&amp;window</code> to drain the window's message queue before the dialog blocks.</p>
+</blockquote>
+<hr />
+<h3 id="wsfolderwindow"><code>ws::FolderWindow</code></h3>
+<p>Standard folder picker dialog.</p>
+<pre><code class="language-cpp">ws::FolderWindow dlg;
+dlg.setTitle(&quot;Select output folder&quot;);
+dlg.setInitialFolder(&quot;C:/Users&quot;);
+
+if (dlg.open(&amp;window)) {
+    std::string folder = dlg.getFolderName();
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setTitle(str)</code> / <code>getTitle()</code></td>
+<td>Dialog title.</td>
+</tr>
+<tr>
+<td><code>setInitialFolder(str)</code></td>
+<td>Pre-selects this folder when the dialog opens.</td>
+</tr>
+<tr>
+<td><code>getFolderName()</code></td>
+<td>The chosen folder path.</td>
+</tr>
+<tr>
+<td><code>addFlag(DWORD)</code> / <code>removeFlag(DWORD)</code> / <code>setFlags(DWORD)</code> / <code>getFlags()</code></td>
+<td>Win32 <code>BIF_*</code> flags.</td>
+</tr>
+<tr>
+<td><code>open(window*)</code></td>
+<td>Shows the picker. Returns <code>true</code> on confirm.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-global-input">10. Global Input</h2>
+<p>These free functions query input state immediately, bypassing the message queue.</p>
+<pre><code class="language-cpp">// Mouse position in a window's client coordinates:
+ws::Vec2i pos = ws::Global::getMousePos(window);
+
+// Raw screen coordinates:
+ws::Vec2i pos = ws::Global::getMousePos();
+
+// Key or button held (uses Win32 virtual key codes):
+bool space  = ws::Global::getButton(VK_SPACE);
+bool lmb    = ws::Global::getButton(VK_LBUTTON);
+bool rmb    = ws::Global::getButton(VK_RBUTTON);
+bool ctrl   = ws::Global::getButton(VK_CONTROL);
+bool shift  = ws::Global::getButton(VK_SHIFT);
+bool wKey   = ws::Global::getButton('W');
+</code></pre>
+<p><code>ws::Global::getButton</code> wraps <code>GetAsyncKeyState</code>. It reflects instantaneous hardware state and will detect input even when your window does not have focus.</p>
+<hr />
+<h2 id="11-complex-usage-examples">11. Complex Usage Examples</h2>
+<h3 id="example-1-animated-spritesheet-with-a-scrolling-camera">Example 1: Animated Spritesheet with a Scrolling Camera</h3>
+<pre><code class="language-cpp">#include &quot;winsimple.h&quot;
+
+int main() {
+    ws::Window window(800, 600, &quot;Camera Demo&quot;);
+
+    ws::Texture sheet;
+    sheet.loadFromFile(&quot;character.png&quot;);
+
+    ws::Sprite sprite(sheet);
+    sprite.setOrigin(16, 32); // pivot at feet
+
+    ws::ShiftData walkAnim;
+    walkAnim.delay = 0.1f;
+    for (int i = 0; i &lt; 6; i++)
+        walkAnim.add(i * 32, 0, 32, 64); // 6 walk frames
+
+    ws::View camera;
+    camera.init(0, 0, 800, 600);
+
+    float playerX = 400.f, playerY = 300.f;
+    ws::Timer dt;
+
+    while (window.isOpen()) {
+        float delta = (float)dt.restart();
+
+        float speed = 200.f * delta;
+        if (ws::Global::getButton(VK_RIGHT)) playerX += speed;
+        if (ws::Global::getButton(VK_LEFT))  playerX -= speed;
+        if (ws::Global::getButton(VK_UP))    playerY -= speed;
+        if (ws::Global::getButton(VK_DOWN))  playerY += speed;
+
+        // Keep the camera centred on the player
+        camera.setCenter((int)playerX, (int)playerY);
+        window.setView(camera);
+
+        sprite.setTextureRect(ws::Shift(walkAnim));
+        sprite.setPosition((int)playerX, (int)playerY);
+
+        window.clear(Gdiplus::Color(255, 60, 120, 60));
+        window.draw(sprite);
+        window.display();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="example-2-drag-and-drop-image-viewer">Example 2: Drag-and-Drop Image Viewer</h3>
+<pre><code class="language-cpp">#include &quot;winsimple.h&quot;
+
+int main() {
+    ws::Window window(900, 700, &quot;Drop an image here&quot;);
+
+    ws::DropTarget drop;
+    drop.setWindow(window);
+    drop.acceptType(&quot;images&quot;);
+    drop.acceptType(&quot;files&quot;);
+
+    ws::Texture image;
+    ws::Sprite  sprite;
+    bool        hasImage = false;
+
+    while (window.isOpen()) {
+        MSG msg;
+        while (window.pollEvent(msg)) {}
+
+        // Poll for completed drops
+        ws::ClipData data;
+        ws::DropEffect effect;
+        while (drop.pollDrop(data, effect)) {
+            bool loaded = false;
+
+            // Prefer inline image data (e.g. dragged from a browser)
+            if (data.getTexture().isValid()) {
+                image  = data.getTexture();
+                loaded = true;
+            }
+            // Fall back to loading from a file path (e.g. from Explorer)
+            else if (!data.getFiles().empty()) {
+                loaded = image.loadFromFile(data.getFiles()[0]);
+            }
+
+            if (loaded) {
+                sprite.setTexture(image);
+                hasImage = true;
+                window.setTitle(data.getFiles().empty()
+                    ? &quot;Dropped image&quot;
+                    : data.getFiles()[0]);
+            }
+        }
+
+        window.clear(Gdiplus::Color(255, 40, 40, 40));
+
+        if (hasImage) {
+            // Scale to fit, preserving aspect ratio
+            float sx = (float)window.getSize().x / image.getSize().x;
+            float sy = (float)window.getSize().y / image.getSize().y;
+            float s  = std::min(sx, sy);
+            sprite.setScale(s, s);
+            sprite.setPosition(0, 0);
+            window.draw(sprite);
+        }
+
+        window.display();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="example-3-ui-layout-with-controls-and-a-menu-bar">Example 3: UI Layout with Controls and a Menu Bar</h3>
+<pre><code class="language-cpp">#include &quot;winsimple.h&quot;
+
+int main() {
+    ws::Window window(620, 420, &quot;UI Demo&quot;);
+
+    // -- Menu bar --
+    ws::Dropdown fileMenu(1, &quot;File&quot;);
+    fileMenu.addItem(101, MF_STRING, &quot;Copy text to clipboard&quot;);
+    fileMenu.addItem(0,   MF_SEPARATOR, &quot;&quot;);
+    fileMenu.addItem(102, MF_STRING, &quot;Exit&quot;);
+
+    ws::Menu menuBar;
+    menuBar.addDropdown(fileMenu);
+    menuBar.setWindow(window);
+
+    // -- Controls --
+    ws::Label   lbl;
+    ws::TextBox input;
+    ws::Button  btn;
+    ws::Slider  slider;
+    ws::ComboBox combo;
+
+    lbl.setText(&quot;Enter some text:&quot;);
+    lbl.setSize(200, 24);
+    lbl.setPosition(10, 10);
+
+    input.setSize(580, 80);
+    input.setPosition(10, 38);
+    input.setCharacterLimit(1024);
+
+    btn.setText(&quot;Copy to clipboard&quot;);
+    btn.setSize(160, 32);
+    btn.setPosition(10, 130);
+
+    slider.setSize(400, 30);
+    slider.setPosition(10, 175);
+
+    combo.setSize(220, 180);
+    combo.setPosition(10, 220);
+    combo.addItems({&quot;Sans-serif&quot;, &quot;Monospace&quot;, &quot;Serif&quot;});
+
+    window.addChild(lbl);
+    window.addChild(input);
+    window.addChild(btn);
+    window.addChild(slider);
+    window.addChild(combo);
+
+    ws::Font  font;
+    ws::Text  statusText;
+    font.loadFromSystem(&quot;Segoe UI&quot;);
+    statusText.setFont(font);
+    statusText.setCharacterSize(14);
+    statusText.setFillColor(Gdiplus::Color(255, 220, 220, 220));
+    statusText.setPosition(10, 360);
+
+    while (window.isOpen()) {
+        MSG msg;
+        while (window.pollEvent(msg)) {
+            // Button click
+            if (btn.isPressed(msg)) {
+                ws::clipboard.copyText(input.getText());
+                statusText.setString(&quot;Copied!&quot;);
+            }
+
+            // Menu commands
+            int cmd = menuBar.getEvent(msg);
+            if (cmd == 101) {
+                ws::clipboard.copyText(input.getText());
+                statusText.setString(&quot;Copied via menu.&quot;);
+            }
+            if (cmd == 102) window.close();
+
+            // Slider moved
+            if (slider.getScroll(msg)) {
+                statusText.setString(&quot;Slider: &quot; +
+                    std::to_string(slider.getSlidePosition()));
+            }
+
+            // Combo selection changed
+            if (combo.selectionChanged(msg)) {
+                statusText.setString(&quot;Font style: &quot; +
+                    combo.getSelectedText());
+            }
+        }
+
+        window.clear(Gdiplus::Color(255, 45, 45, 48));
+        window.draw(statusText);
+        window.display();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="example-4-polygon-physics-and-texture-mapping">Example 4: Polygon Physics and Texture Mapping</h3>
+<pre><code class="language-cpp">#include &quot;winsimple.h&quot;
+
+int main() {
+    ws::Window window(800, 600, &quot;Poly Physics&quot;);
+
+    ws::Texture groundTex;
+    groundTex.loadFromFile(&quot;ground.png&quot;);
+
+    // A textured ground polygon
+    ws::Poly ground;
+    ground.addVertex(0,   480);
+    ground.addVertex(800, 480);
+    ground.addVertex(800, 600);
+    ground.addVertex(0,   600);
+    ground.setTexture(groundTex);
+
+    // A wall on the right side
+    ws::Poly wall;
+    wall.addVertex(750, 0);
+    wall.addVertex(800, 0);
+    wall.addVertex(800, 480);
+    wall.addVertex(750, 480);
+    wall.setFillColor(Gdiplus::Color(200, 180, 180, 180));
+
+    ws::Radial ball;
+    ball.setRadius(18);
+    ball.setFillColor(Gdiplus::Color(255, 255, 80, 20));
+    ball.setBorderColor(Gdiplus::Color(255, 255, 200, 0));
+    ball.setBorderWidth(2);
+    ball.setPosition(100, 100);
+
+    float vx = 240.f, vy = 0.f;
+    ws::Timer dt;
+
+    while (window.isOpen()) {
+        float delta = (float)dt.restart();
+
+        // Gravity
+        vy += 600.f * delta;
+
+        ball.move((int)(vx * delta), (int)(vy * delta));
+        ws::Vec2i pos = ball.getPosition();
+
+        // Bounce off ground
+        if (ground.contains(pos)) {
+            vy = -std::abs(vy) * 0.65f;
+            vx *=  0.98f;
+            ball.move(0, -4);
+        }
+
+        // Bounce off wall
+        if (wall.contains(pos)) {
+            vx = -std::abs(vx);
+            ball.move(-6, 0);
+        }
+
+        // Wrap around left edge
+        if (pos.x &lt; -20) ball.setPosition(820, pos.y);
+
+        window.clear(Gdiplus::Color(255, 100, 160, 220));
+        window.draw(ground);
+        window.draw(wall);
+        window.draw(ball);
+        window.display();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="example-5-audio-player-with-a-seek-bar">Example 5: Audio Player with a Seek Bar</h3>
+<pre><code class="language-cpp">#include &quot;winsimple.h&quot;
+
+int main() {
+    ws::Window window(500, 200, &quot;Audio Player&quot;);
+
+    ws::Button btnPlay, btnStop;
+    ws::Slider seekBar;
+    ws::Label  timeLbl;
+
+    btnPlay.setText(&quot;Play&quot;);
+    btnPlay.setSize(80, 32);
+    btnPlay.setPosition(10, 10);
+
+    btnStop.setText(&quot;Stop&quot;);
+    btnStop.setSize(80, 32);
+    btnStop.setPosition(100, 10);
+
+    seekBar.setSize(460, 30);
+    seekBar.setPosition(10, 55);
+
+    timeLbl.setSize(460, 24);
+    timeLbl.setPosition(10, 100);
+
+    window.addChild(btnPlay);
+    window.addChild(btnStop);
+    window.addChild(seekBar);
+    window.addChild(timeLbl);
+
+    ws::Wav audio;
+    audio.open(&quot;music.mp3&quot;, ws::Wav::getFreeChannel());
+    audio.setVolume(80);
+
+    long total = audio.getLength();
+    seekBar.setRange(0, (int)total);
+
+    // Format seconds as mm:ss
+    auto fmt = [](long s) -&gt; std::string {
+        return std::to_string(s / 60) + &quot;:&quot; +
+               (s % 60 &lt; 10 ? &quot;0&quot; : &quot;&quot;) + std::to_string(s % 60);
+    };
+
+    while (window.isOpen()) {
+        MSG msg;
+        while (window.pollEvent(msg)) {
+            if (btnPlay.isPressed(msg))  audio.play();
+            if (btnStop.isPressed(msg))  audio.stop();
+
+            // Dragging the seek bar repositions playback
+            if (seekBar.getScroll(msg))
+                audio.setProgress(seekBar.getSlidePosition());
+        }
+
+        // Keep the seek bar in sync with playback
+        long pos = audio.getProgress();
+        seekBar.setSlidePosition((int)pos);
+        timeLbl.setText(fmt(pos) + &quot; / &quot; + fmt(total) +
+            (audio.isFinished() ? &quot;   [Finished]&quot; : &quot;&quot;));
+
+        window.clear(Gdiplus::Color(255, 28, 28, 28));
+        window.display();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="example-6-pixel-drawing-canvas">Example 6: Pixel Drawing Canvas</h3>
+<pre><code class="language-cpp">#include &quot;winsimple.h&quot;
+
+int main() {
+    ws::Window window(800, 600, &quot;Pixel Canvas&quot;);
+
+    ws::Texture canvas;
+    canvas.create(800, 600, Gdiplus::Color(255, 255, 255, 255));
+
+    ws::Sprite canvasSprite(canvas);
+    canvasSprite.setPosition(0, 0);
+
+    ws::Hue drawColour = ws::Hue::black;
+    int     brushSize  = 4;
+
+    ws::ClickMenu colourMenu;
+    colourMenu.init(window);
+    colourMenu.addItem(&quot;Black&quot;);
+    colourMenu.addItem(&quot;Red&quot;);
+    colourMenu.addItem(&quot;Blue&quot;);
+    colourMenu.addItem(&quot;Green&quot;);
+    colourMenu.addItem(&quot;White (erase)&quot;);
+
+    while (window.isOpen()) {
+        MSG msg;
+        while (window.pollEvent(msg)) {
+            if (msg.message == WM_RBUTTONUP) {
+                colourMenu.show(ws::Global::getMousePos(window));
+                switch (colourMenu.getCommand()) {
+                    case 1: drawColour = ws::Hue::black;  break;
+                    case 2: drawColour = ws::Hue::red;    break;
+                    case 3: drawColour = ws::Hue::blue;   break;
+                    case 4: drawColour = ws::Hue::green;  break;
+                    case 5: drawColour = ws::Hue::white;  break;
+                }
+            }
+        }
+
+        // Draw with left mouse button
+        if (ws::Global::getButton(VK_LBUTTON)) {
+            ws::Vec2i mouse = ws::Global::getMousePos(window);
+            for (int dy = -brushSize; dy &lt;= brushSize; dy++)
+                for (int dx = -brushSize; dx &lt;= brushSize; dx++)
+                    canvas.setPixel(mouse.x + dx, mouse.y + dy, drawColour);
+            canvasSprite.setTexture(canvas, false);
+        }
+
+        // Save on Ctrl+S
+        if (ws::Global::getButton(VK_CONTROL) &amp;&amp;
+            ws::Global::getButton('S')) {
+            ws::FileWindow save;
+            save.setTitle(&quot;Save drawing&quot;);
+            save.setFileName(&quot;drawing.png&quot;);
+            if (save.save(&amp;window))
+                canvas.saveToFile(save.getFileName());
+        }
+
+        window.clear();
+        window.draw(canvasSprite);
+        window.display();
+    }
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

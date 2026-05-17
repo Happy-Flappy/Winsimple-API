@@ -1,0 +1,3208 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>WinSimple V1.4 API Documentation - Winsimple API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="yellow" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#winsimple-v14-api-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Winsimple API" class="md-header__button md-logo" aria-label="Winsimple API" data-md-component="logo">
+      
+  <img src="../../images/Logomark (Black).svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Winsimple API
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WinSimple V1.4 API Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="yellow" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="yellow" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Winsimple API" class="md-nav__button md-logo" aria-label="Winsimple API" data-md-component="logo">
+      
+  <img src="../../images/Logomark (Black).svg" alt="logo">
+
+    </a>
+    Winsimple API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-ws-winapi-converters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespace: ws (WinAPI Converters)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespace: ws (WinAPI Converters)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bool-resolverelativepathstdstring-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool ResolveRelativePath(std::string path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdwstring-widestdstring-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::wstring WIDE(std::string str)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-shortconst-stdwstring-wstr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::string SHORT(const std::wstring&amp; wstr)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lpcstr-to_lpcstrstdstring-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LPCSTR TO_LPCSTR(std::string str)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdwstring-getshortpathnamesafeconst-stdwstring-longpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::wstring GetShortPathNameSafe(const std::wstring&amp; longPath)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-ws-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespace: ws (Data Types)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespace: ws (Data Types)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vector Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struct-vec2i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        struct Vec2i
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-vec2f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        struct Vec2f
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-vec2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        struct Vec2d
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-vec3i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        struct Vec3i
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-vec3f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        struct Vec3f
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-vec3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        struct Vec3d
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rectangle-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rectangle Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rectangle Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struct-intrect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        struct IntRect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-floatrect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        struct FloatRect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-doublerect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        struct DoubleRect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-ws-sound-and-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespace: ws (Sound and Video)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespace: ws (Sound and Video)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-wav" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Wav
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Wav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor-destructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor &amp; Destructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Static Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Static Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-int-getfreechannel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        static int getFreeChannel()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-stdstring-getchannelstatusint-m_channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        static std::string getChannelStatus(int m_channel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-bool-playfreestdstring-m_path-int-m_channel-bool-m_blocking-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        static bool PlayFree(std::string m_path, int m_channel, bool m_blocking = false)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-void-issupportedstdstring-m_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        static void isSupported(std::string m_path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bool-openstdstring-m_path-int-m_channel-bool-m_blocking-true" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool open(std::string m_path, int m_channel, bool m_blocking = true)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void play()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-stop-static-void-stopint-m_channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void stop() / static void stop(int m_channel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-setvolumeint-percent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool setVolume(int percent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-getvolume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int getVolume()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-setprogresslong-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool setProgress(long seconds)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-getprogress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        long getProgress()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-getlength" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        long getLength()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-isfinished" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool isFinished()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-ws-graphics-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespace: ws (Graphics Entities)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespace: ws (Graphics Entities)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View Information
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View Transformations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinate-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinate Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Texture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Texture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-members_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor-destructor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor &amp; Destructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Move Semantics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bool-createint-w-int-h-gdipluscolor-color-0000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool create(int w, int h, Gdiplus::Color color = {0,0,0,0})
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-loadstdstring-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool load(std::string path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-isvalid-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool isValid() const
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-setpixelint-xindex-int-yindex-gdipluscolor-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void setPixel(int xIndex, int yIndex, Gdiplus::Color &amp;color)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdipluscolor-getpixelint-xindex-int-yindex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gdiplus::Color getPixel(int xIndex, int yIndex)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-drawable-abstract-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Drawable (Abstract Base)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Drawable (Abstract Base)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-members_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transform-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transform Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utility Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformresult-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TransformResult Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pure-virtual-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pure Virtual Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-sprite-inherits-drawable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Sprite (inherits Drawable)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Sprite (inherits Drawable)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-settexturewstexture-texture-bool-resize-true" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void setTexture(ws::Texture&amp; texture, bool resize = true)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-settexturerectwsintrect-rect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void setTextureRect(ws::IntRect rect)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsintrect-gettexturerect-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ws::IntRect getTextureRect() const
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wstexture-gettexture-const-texture-gettexture-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ws::Texture&amp; getTexture() / const Texture* getTexture() const
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-hastexture-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool hasTexture() const
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inherited-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inherited Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-rectangle-inherits-drawable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Rectangle (inherits Drawable)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Rectangle (inherits Drawable)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-members_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inherited-methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inherited Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-line-inherits-drawable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Line (inherits Drawable)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Line (inherits Drawable)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-members_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bool-onsegmentwsvec2i-p-wsvec2i-q-wsvec2i-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool onSegment(ws::Vec2i p, ws::Vec2i q, ws::Vec2i r)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-orientationwsvec2i-p-wsvec2i-q-wsvec2i-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int orientation(ws::Vec2i p, ws::Vec2i q, ws::Vec2i r)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-intersectsline-otherline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool intersects(Line &amp;otherLine)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inherited-methods_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inherited Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-poly-inherits-drawable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Poly (inherits Drawable)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Poly (inherits Drawable)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-members_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertex-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertex Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation &amp; Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collision-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collision Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inherited-methods_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inherited Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-radial-inherits-drawable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Radial (inherits Drawable)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Radial (inherits Drawable)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometry-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometry Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appearance-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appearance Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inherited-methods_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inherited Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-members_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-ws-system-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespace: ws (System Entities)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespace: ws (System Entities)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Timer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Timer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#double-restart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        double restart()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-getseconds-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        double getSeconds() const
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-getmilliseconds-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        double getMilliSeconds() const
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-getmicroseconds-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        double getMicroSeconds() const
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-members_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-clipboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Clipboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Clipboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bool-copytextconst-stdstring-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool copyText(const std::string&amp; str)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-pastetext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::string pasteText()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Image Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bool-copytexturewstexture-texture-wsintrect-rect-0000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool copyTexture(ws::Texture &amp;texture, ws::IntRect rect = {0,0,0,0})
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wstexture-pastetexturewsintrect-rect-0000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ws::Texture pasteTexture(ws::IntRect rect = {0,0,0,0})
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utility Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Instance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-gdiplus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: GDIPLUS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: GDIPLUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Destructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-instance_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Instance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Window
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Window Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Window Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fullscreen-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fullscreen Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Window State
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-members_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Static Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-ws-global-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespace: ws (Global Input)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespace: ws (Global Input)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespace-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespace: Global
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespace: Global">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mouse-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouse Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttonkey-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Button/Key Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-ws-child-window-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespace: ws (Child Window API)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespace: ws (Child Window API)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-class-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base Class: Child
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Base Class: Child">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-members_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Position &amp; Size
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Style Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Color Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-button-inherits-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Button (inherits Child)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Button (inherits Child)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initialization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-slider-inherits-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Slider (inherits Child)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Slider (inherits Child)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialization_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initialization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-handling_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orientation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range &amp; Position
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-textbox-inherits-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: TextBox (inherits Child)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: TextBox (inherits Child)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialization_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initialization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-label-inherits-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Label (inherits Child)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: Label (inherits Child)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialization_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initialization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Styles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thread-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thread Safety
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="winsimple-v14-api-documentation">WinSimple V1.4 API Documentation</h1>
+<p><img alt="GDI+ Graphics and Clipboard Copying" src="../../images/Screenshot%202026-05-16%20202413.png" /></p>
+<pre><code>#include &quot;winsimple.h&quot;
+</code></pre>
+<p><strong>Linking:</strong> -lgdi32 -luser32 -lole32 -lmsimg32 -lkernel32 -lwinmm -lcomctl32 -lgdiplus</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#namespace-ws-winapi-converters">Namespace: ws (WinAPI Converters)</a></li>
+<li><a href="#namespace-ws-data-types">Namespace: ws (Data Types)</a></li>
+<li><a href="#namespace-ws-sound-and-video">Namespace: ws (Sound and Video)</a></li>
+<li><a href="#namespace-ws-graphics-entities">Namespace: ws (Graphics Entities)</a></li>
+<li><a href="#namespace-ws-system-entities">Namespace: ws (System Entities)</a></li>
+<li><a href="#namespace-ws-global-input">Namespace: ws (Global Input)</a></li>
+<li><a href="#namespace-ws-child-window-api">Namespace: ws (Child Window API)</a></li>
+</ol>
+<hr />
+<h2 id="namespace-ws-winapi-converters">Namespace: ws (WinAPI Converters)</h2>
+<p>Utility functions for converting between Windows API types and C++ standard types.</p>
+<h3 id="functions">Functions</h3>
+<h4 id="bool-resolverelativepathstdstring-path"><code>bool ResolveRelativePath(std::string path)</code></h4>
+<p>Converts a relative path to absolute path using the executable's directory.
+- <strong>Parameters:</strong> <code>path</code> - The relative or absolute file path
+- <strong>Returns:</strong> <code>true</code> if file exists, <code>false</code> otherwise
+- <strong>Note:</strong> Updates the path parameter to absolute path</p>
+<h4 id="stdwstring-widestdstring-str"><code>std::wstring WIDE(std::string str)</code></h4>
+<p>Converts UTF-8 string to wide string (UTF-16).
+- <strong>Parameters:</strong> <code>str</code> - UTF-8 encoded string
+- <strong>Returns:</strong> Wide character string</p>
+<h4 id="stdstring-shortconst-stdwstring-wstr"><code>std::string SHORT(const std::wstring&amp; wstr)</code></h4>
+<p>Converts wide string (UTF-16) to UTF-8 string.
+- <strong>Parameters:</strong> <code>wstr</code> - Wide character string
+- <strong>Returns:</strong> UTF-8 encoded string</p>
+<h4 id="lpcstr-to_lpcstrstdstring-str"><code>LPCSTR TO_LPCSTR(std::string str)</code></h4>
+<p>Converts std::string to LPCSTR (C-style string).
+- <strong>Parameters:</strong> <code>str</code> - Standard string
+- <strong>Returns:</strong> C-style string pointer</p>
+<h4 id="stdwstring-getshortpathnamesafeconst-stdwstring-longpath"><code>std::wstring GetShortPathNameSafe(const std::wstring&amp; longPath)</code></h4>
+<p>Converts long Windows path to short path format (8.3).
+- <strong>Parameters:</strong> <code>longPath</code> - Long path name
+- <strong>Returns:</strong> Short path name or empty string on failure
+- <strong>Usage:</strong> Required for MCI functions that don't support long paths</p>
+<hr />
+<h2 id="namespace-ws-data-types">Namespace: ws (Data Types)</h2>
+<p>Template-based vector and rectangle structures with automatic type conversion.</p>
+<h3 id="vector-types">Vector Types</h3>
+<h4 id="struct-vec2i"><code>struct Vec2i</code></h4>
+<p>2D integer vector with type conversion support.
+- <strong>Members:</strong> <code>int x, y</code>
+- <strong>Constructors:</strong>
+  - <code>Vec2i()</code> - Default constructor
+  - <code>Vec2i(T x_val, U y_val)</code> - Template constructor for any arithmetic types
+  - <code>Vec2i(const T&amp; other)</code> - Constructor from any type with .x, .y members
+- <strong>Conversion Operators:</strong>
+  - <code>operator T() const</code> - Convert to any type with .x, .y members
+  - <code>operator POINT*()</code> - Convert to Windows POINT pointer
+  - <code>operator const POINT*() const</code> - Const POINT pointer conversion</p>
+<h4 id="struct-vec2f"><code>struct Vec2f</code></h4>
+<p>2D float vector with identical interface to Vec2i (float members).</p>
+<h4 id="struct-vec2d"><code>struct Vec2d</code></h4>
+<p>2D double vector with identical interface to Vec2i (double members).</p>
+<h4 id="struct-vec3i"><code>struct Vec3i</code></h4>
+<p>3D integer vector with type conversion support.
+- <strong>Members:</strong> <code>int x, y, z</code>
+- <strong>Constructors:</strong> Support for three arithmetic types or types with .x, .y, .z members</p>
+<h4 id="struct-vec3f"><code>struct Vec3f</code></h4>
+<p>3D float vector with identical interface to Vec3i.</p>
+<h4 id="struct-vec3d"><code>struct Vec3d</code></h4>
+<p>3D double vector with identical interface to Vec3i.</p>
+<h3 id="rectangle-types">Rectangle Types</h3>
+<h4 id="struct-intrect"><code>struct IntRect</code></h4>
+<p>Integer rectangle with width/height style.
+- <strong>Members:</strong> <code>int left, top, width, height</code>
+- <strong>Constructors:</strong>
+  - <code>IntRect(T1 l, T2 t, T3 w, T4 h)</code> - Template constructor for any arithmetic types
+  - <code>IntRect(const T&amp; other)</code> - Constructor from any rect-like type (supports both width/height and right/bottom styles)
+- <strong>Conversion Operators:</strong>
+  - <code>operator T() const</code> - Convert to any rect-like type</p>
+<h4 id="struct-floatrect"><code>struct FloatRect</code></h4>
+<p>Float rectangle with identical interface to IntRect (float members).</p>
+<h4 id="struct-doublerect"><code>struct DoubleRect</code></h4>
+<p>Double rectangle with identical interface to IntRect (double members).</p>
+<p><strong>Note:</strong> All rectangle types automatically handle conversion between:
+- Width/height style (e.g., <code>sf::IntRect</code>, custom types with .left, .top, .width, .height<code>)
+- Right/bottom style (e.g., Windows</code>RECT<code>with .left, .top, .right, .bottom</code>)</p>
+<hr />
+<h2 id="namespace-ws-sound-and-video">Namespace: ws (Sound and Video)</h2>
+<p>Audio playback using Windows MCI (Media Control Interface).</p>
+<h3 id="class-wav">Class: Wav</h3>
+<p>Manages audio file playback with channel-based system.</p>
+<h4 id="public-members">Public Members</h4>
+<pre><code class="language-cpp">std::string path    // File path
+int channel         // Audio channel ID (0-100)
+bool blocking       // Whether playback blocks other operations
+std::string ID      // Internal channel identifier
+std::string extension // File extension
+</code></pre>
+<h4 id="constructor-destructor">Constructor &amp; Destructor</h4>
+<pre><code class="language-cpp">Wav(std::string path = &quot;&quot;, int channel = 0, bool blocking = true)
+~Wav() // Automatically closes MCI channel
+</code></pre>
+<h4 id="static-methods">Static Methods</h4>
+<h5 id="static-int-getfreechannel"><code>static int getFreeChannel()</code></h5>
+<p>Finds an available audio channel (0-100).
+- <strong>Returns:</strong> Available channel ID or -1 if none available
+- <strong>Note:</strong> Channels are considered free if not "playing" or "paused"</p>
+<h5 id="static-stdstring-getchannelstatusint-m_channel"><code>static std::string getChannelStatus(int m_channel)</code></h5>
+<p>Gets the current status of a channel.
+- <strong>Parameters:</strong> <code>m_channel</code> - Channel ID to check
+- <strong>Returns:</strong> Status string ("playing", "stopped", "paused", "error")</p>
+<h5 id="static-bool-playfreestdstring-m_path-int-m_channel-bool-m_blocking-false"><code>static bool PlayFree(std::string m_path, int m_channel, bool m_blocking = false)</code></h5>
+<p>Plays an audio file on the specified channel.
+- <strong>Parameters:</strong>
+  - <code>m_path</code> - Audio file path
+  - <code>m_channel</code> - Channel ID
+  - <code>m_blocking</code> - Whether to block during playback
+- <strong>Returns:</strong> <code>true</code> on success, <code>false</code> on failure
+- <strong>Note:</strong> Automatically converts long paths to short paths</p>
+<h5 id="static-void-issupportedstdstring-m_path"><code>static void isSupported(std::string m_path)</code></h5>
+<p>Checks if file format is supported and issues warnings.
+- <strong>Always Supported:</strong> .wav, .mid, .midi
+- <strong>Usually Supported:</strong> .mp3, .wma
+- <strong>Limited Support:</strong> .au, .aif, .aiff, .snd</p>
+<h4 id="instance-methods">Instance Methods</h4>
+<h5 id="bool-openstdstring-m_path-int-m_channel-bool-m_blocking-true"><code>bool open(std::string m_path, int m_channel, bool m_blocking = true)</code></h5>
+<p>Opens an audio file for playback.
+- <strong>Returns:</strong> <code>true</code> on success
+- <strong>Note:</strong> Sets up MCI device and time format in milliseconds</p>
+<h5 id="void-play"><code>void play()</code></h5>
+<p>Starts playback on the opened channel.
+- <strong>Behavior:</strong> Respects blocking setting; won't restart if already playing and blocking</p>
+<h5 id="void-stop-static-void-stopint-m_channel"><code>void stop()</code> / <code>static void stop(int m_channel)</code></h5>
+<p>Pauses playback on the channel.</p>
+<h5 id="bool-setvolumeint-percent"><code>bool setVolume(int percent)</code></h5>
+<p>Sets volume level (0-100%).
+- <strong>Returns:</strong> <code>true</code> on success
+- <strong>Note:</strong> Not supported for MIDI files; uses MCI volume range 0-1000</p>
+<h5 id="int-getvolume"><code>int getVolume()</code></h5>
+<p>Gets current volume level (0-100%).
+- <strong>Returns:</strong> Volume percentage or 0 on error</p>
+<h5 id="bool-setprogresslong-seconds"><code>bool setProgress(long seconds)</code></h5>
+<p>Seeks to specified position in seconds.
+- <strong>Returns:</strong> <code>true</code> on success
+- <strong>Behavior:</strong> Different commands for playing vs paused/stopped states</p>
+<h5 id="long-getprogress"><code>long getProgress()</code></h5>
+<p>Gets current playback position in seconds.
+- <strong>Returns:</strong> Position in seconds or 0 on error</p>
+<h5 id="long-getlength"><code>long getLength()</code></h5>
+<p>Gets total duration in seconds.
+- <strong>Returns:</strong> Duration in seconds or 0 on error</p>
+<h5 id="bool-isfinished"><code>bool isFinished()</code></h5>
+<p>Checks if playback has completed.
+- <strong>Returns:</strong> <code>true</code> if progress &gt;= length</p>
+<hr />
+<h2 id="namespace-ws-graphics-entities">Namespace: ws (Graphics Entities)</h2>
+<p>Core graphics classes for rendering and display management.</p>
+<h3 id="class-view">Class: View</h3>
+<p>Manages 2D camera/viewport transformations and coordinate conversion.</p>
+<h4 id="public-methods">Public Methods</h4>
+<h5 id="view-control">View Control</h5>
+<pre><code class="language-cpp">void setRect(ws::IntRect viewRect)           // Set world rectangle
+void setSize(ws::Vec2i size)                 // Set world size
+void setPos(ws::Vec2i pos)                   // Set world position
+void setPortRect(ws::IntRect portRect)       // Set viewport rectangle
+void setPortSize(ws::Vec2i size)             // Set viewport size
+void setPortSize(int x, int y)               // Set viewport size (int overload)
+void setPortPos(ws::Vec2i pos)               // Set viewport position
+void setPortPos(int x, int y)                // Set viewport position (int overload)
+</code></pre>
+<h5 id="view-information">View Information</h5>
+<pre><code class="language-cpp">ws::IntRect getRect()                        // Get world rectangle
+ws::Vec2i getSize()                          // Get world size
+ws::Vec2i getPos()                           // Get world position
+ws::IntRect getPortRect()                    // Get viewport rectangle
+ws::Vec2i getPortSize()                      // Get viewport size
+ws::Vec2i getPortPos()                       // Get viewport position
+</code></pre>
+<h5 id="view-transformations">View Transformations</h5>
+<pre><code class="language-cpp">void zoom(float factor)                      // Zoom view (factor &gt; 1 = zoom in)
+void move(ws::Vec2i delta)                   // Move world view
+void movePort(ws::Vec2i delta)               // Move viewport
+</code></pre>
+<h5 id="coordinate-conversion">Coordinate Conversion</h5>
+<pre><code class="language-cpp">ws::Vec2i toWorld(ws::Vec2i pos)             // Window to world coordinates
+ws::Vec2i toWindow(ws::Vec2i pos)            // World to window coordinates
+</code></pre>
+<h4 id="private-members">Private Members</h4>
+<pre><code class="language-cpp">ws::IntRect world   // World coordinate system
+ws::IntRect port    // Viewport (screen) coordinate system
+</code></pre>
+<hr />
+<h3 id="class-texture">Class: Texture</h3>
+<p>Wraps GDI+ bitmap functionality for image loading, creation, and manipulation.</p>
+<h4 id="public-members_1">Public Members</h4>
+<pre><code class="language-cpp">Gdiplus::Bitmap* bitmap    // GDI+ bitmap pointer
+int width                  // Image width in pixels
+int height                 // Image height in pixels
+</code></pre>
+<h4 id="constructor-destructor_1">Constructor &amp; Destructor</h4>
+<pre><code class="language-cpp">Texture()                    // Default constructor (nullptr bitmap)
+Texture(std::string path)    // Load from file
+~Texture()                   // Automatically deletes bitmap
+</code></pre>
+<h4 id="move-semantics">Move Semantics</h4>
+<pre><code class="language-cpp">Texture(Texture&amp;&amp; other) noexcept            // Move constructor
+Texture&amp; operator=(Texture&amp;&amp; other) noexcept // Move assignment
+</code></pre>
+<h4 id="methods">Methods</h4>
+<h5 id="bool-createint-w-int-h-gdipluscolor-color-0000"><code>bool create(int w, int h, Gdiplus::Color color = {0,0,0,0})</code></h5>
+<p>Creates a new blank texture.
+- <strong>Parameters:</strong>
+  - <code>w, h</code> - Dimensions in pixels
+  - <code>color</code> - Initial fill color (default transparent)
+- <strong>Returns:</strong> <code>true</code> on success</p>
+<h5 id="bool-loadstdstring-path"><code>bool load(std::string path)</code></h5>
+<p>Loads image from file.
+- <strong>Parameters:</strong> <code>path</code> - File path (supports relative paths)
+- <strong>Returns:</strong> <code>true</code> on success
+- <strong>Supported Formats:</strong> Any format supported by GDI+ (PNG, JPEG, BMP, etc.)
+- <strong>Note:</strong> Automatically resolves relative paths and cleans up existing bitmap</p>
+<h5 id="bool-isvalid-const"><code>bool isValid() const</code></h5>
+<p>Checks if texture is loaded.
+- <strong>Returns:</strong> <code>true</code> if bitmap is not nullptr</p>
+<h5 id="void-setpixelint-xindex-int-yindex-gdipluscolor-color"><code>void setPixel(int xIndex, int yIndex, Gdiplus::Color &amp;color)</code></h5>
+<p>Sets pixel color at specified coordinates.</p>
+<h5 id="gdipluscolor-getpixelint-xindex-int-yindex"><code>Gdiplus::Color getPixel(int xIndex, int yIndex)</code></h5>
+<p>Gets pixel color at specified coordinates.
+- <strong>Returns:</strong> Color object at (xIndex, yIndex)</p>
+<hr />
+<h3 id="class-drawable-abstract-base">Class: Drawable (Abstract Base)</h3>
+<p>Base class for all drawable objects with transform support.</p>
+<h4 id="public-members_2">Public Members</h4>
+<pre><code class="language-cpp">int x = 0, y = 0, z = 0          // Position
+int width = 1, height = 1        // Dimensions
+ws::Vec2f scale = {1,1}          // Scale factors (negative = flip)
+ws::Vec2i origin = {0,0}         // Transform origin point
+</code></pre>
+<h4 id="methods_1">Methods</h4>
+<h5 id="transform-controls">Transform Controls</h5>
+<pre><code class="language-cpp">void setScale(ws::Vec2f s)         // Set scale vector
+void setScale(float sx, float sy)  // Set scale components
+void setOrigin(ws::Vec2i pos)      // Set origin point
+void setOrigin(int posx, int posy) // Set origin components
+</code></pre>
+<h5 id="utility-methods">Utility Methods</h5>
+<pre><code class="language-cpp">int getScaledWidth() const         // Get visual width after scaling
+int getScaledHeight() const        // Get visual height after scaling
+void getBounds(int&amp; left, int&amp; top, int&amp; right, int&amp; bottom) const // Get visual bounds
+</code></pre>
+<h4 id="transformresult-structure">TransformResult Structure</h4>
+<pre><code class="language-cpp">struct TransformResult {
+    int drawX, drawY;           // Screen coordinates to draw at
+    int visualWidth, visualHeight; // Visual dimensions on screen
+    int srcX, srcY;             // Source texture coordinates
+    int srcWidth, srcHeight;    // Source dimensions (may be negative for flipping)
+    bool visible;               // Whether object is visible in view
+
+    static TransformResult calculate(const Drawable&amp; drawable, View&amp; view, 
+                                     int texLeft = 0, int texTop = 0,
+                                     int texWidth = 0, int texHeight = 0);
+};
+</code></pre>
+<h4 id="pure-virtual-methods">Pure Virtual Methods</h4>
+<pre><code class="language-cpp">virtual void draw(Gdiplus::Graphics* graphics, View &amp;view) = 0
+virtual bool contains(ws::Vec2i pos) = 0
+virtual ~Drawable() = default
+</code></pre>
+<hr />
+<h3 id="class-sprite-inherits-drawable">Class: Sprite (inherits Drawable)</h3>
+<p>Drawable textured rectangle with source rectangle support.</p>
+<h4 id="constructor">Constructor</h4>
+<pre><code class="language-cpp">Sprite()  // Default constructor
+</code></pre>
+<h4 id="methods_2">Methods</h4>
+<h5 id="void-settexturewstexture-texture-bool-resize-true"><code>void setTexture(ws::Texture&amp; texture, bool resize = true)</code></h5>
+<p>Sets the texture to display.
+- <strong>Parameters:</strong>
+  - <code>texture</code> - Reference to texture object
+  - <code>resize</code> - Whether to resize sprite to match texture dimensions</p>
+<h5 id="void-settexturerectwsintrect-rect"><code>void setTextureRect(ws::IntRect rect)</code></h5>
+<p>Sets the source rectangle within the texture.
+- <strong>Parameters:</strong> <code>rect</code> - Source rectangle (left, top, width, height)
+- <strong>Note:</strong> Automatically updates sprite dimensions</p>
+<h5 id="wsintrect-gettexturerect-const"><code>ws::IntRect getTextureRect() const</code></h5>
+<p>Gets current source rectangle.
+- <strong>Returns:</strong> Current texture rectangle</p>
+<h5 id="wstexture-gettexture-const-texture-gettexture-const"><code>ws::Texture&amp; getTexture()</code> / <code>const Texture* getTexture() const</code></h5>
+<p>Gets texture reference/pointer.</p>
+<h5 id="bool-hastexture-const"><code>bool hasTexture() const</code></h5>
+<p>Checks if texture is assigned.
+- <strong>Returns:</strong> <code>true</code> if texture reference is not nullptr</p>
+<h4 id="inherited-methods">Inherited Methods</h4>
+<pre><code class="language-cpp">bool contains(ws::Vec2i pos) override  // Point-in-rectangle test
+void draw(Gdiplus::Graphics* graphics, View &amp;view) override  // Render with texture
+</code></pre>
+<hr />
+<h3 id="class-rectangle-inherits-drawable">Class: Rectangle (inherits Drawable)</h3>
+<p>Simple colored rectangle drawable.</p>
+<h4 id="public-members_3">Public Members</h4>
+<pre><code class="language-cpp">Gdiplus::Color color = {255,100,200,100}  // Default light green
+</code></pre>
+<h4 id="constructor_1">Constructor</h4>
+<pre><code class="language-cpp">Rectangle()  // Creates 10x10 rectangle at (0,0)
+</code></pre>
+<h4 id="inherited-methods_1">Inherited Methods</h4>
+<pre><code class="language-cpp">bool contains(ws::Vec2i pos) override      // Point-in-rectangle test
+void draw(Gdiplus::Graphics* canvas, View &amp;view) override  // Render filled rectangle
+</code></pre>
+<hr />
+<h3 id="class-line-inherits-drawable">Class: Line (inherits Drawable)</h3>
+<p>Line segment with intersection testing.</p>
+<h4 id="public-members_4">Public Members</h4>
+<pre><code class="language-cpp">ws::Vec2i start                    // Start point
+ws::Vec2i end                      // End point
+Gdiplus::Color color = {255,0,0,255}  // Default blue
+</code></pre>
+<h4 id="constructor_2">Constructor</h4>
+<pre><code class="language-cpp">Line(ws::Vec2i start = {0,0}, ws::Vec2i end = {0,0}, 
+     int thewidth = 2, Gdiplus::Color color = {255,0,0,255})
+</code></pre>
+<h4 id="methods_3">Methods</h4>
+<h5 id="bool-onsegmentwsvec2i-p-wsvec2i-q-wsvec2i-r"><code>bool onSegment(ws::Vec2i p, ws::Vec2i q, ws::Vec2i r)</code></h5>
+<p>Checks if point q lies on segment pr.</p>
+<h5 id="int-orientationwsvec2i-p-wsvec2i-q-wsvec2i-r"><code>int orientation(ws::Vec2i p, ws::Vec2i q, ws::Vec2i r)</code></h5>
+<p>Returns orientation of ordered triplet.
+- <strong>Returns:</strong> 0 = collinear, 1 = clockwise, 2 = counterclockwise</p>
+<h5 id="bool-intersectsline-otherline"><code>bool intersects(Line &amp;otherLine)</code></h5>
+<p>Tests line segment intersection using cross-product method.
+- <strong>Returns:</strong> <code>true</code> if lines intersect (including collinear overlap)</p>
+<h4 id="inherited-methods_2">Inherited Methods</h4>
+<pre><code class="language-cpp">bool contains(ws::Vec2i pos) override      // Always returns false
+void draw(Gdiplus::Graphics* canvas, View &amp;view) override  // Render line
+</code></pre>
+<hr />
+<h3 id="class-poly-inherits-drawable">Class: Poly (inherits Drawable)</h3>
+<p>Polygon with fill, border, and collision detection.</p>
+<h4 id="public-members_5">Public Members</h4>
+<pre><code class="language-cpp">std::vector&lt;ws::Vec2i&gt; vertices           // Vertex list
+Gdiplus::Color fillColor = {255,255,0,0}    // Default red fill
+Gdiplus::Color borderColor = {255,255,0,100} // Default yellow border
+int borderWidth = 2                     // Border thickness
+bool filled = true                      // Whether to fill polygon
+bool closed = true                      // Whether to close shape
+</code></pre>
+<h4 id="constructors">Constructors</h4>
+<pre><code class="language-cpp">Poly()  // Default constructor
+Poly(std::vector&lt;ws::Vec2i&gt;&amp; vertices, Gdiplus::Color fillColor = {255,255,0,0}, 
+     Gdiplus::Color borderColor = {255,255,0,255}, int borderWidth = 2, bool filled = true)
+</code></pre>
+<h4 id="vertex-management">Vertex Management</h4>
+<pre><code class="language-cpp">void addVertex(ws::Vec2i vertex)    // Add vertex
+void addVertex(int x, int y)        // Add vertex (component form)
+void clear()                        // Remove all vertices
+size_t vertexCount()                // Get vertex count
+</code></pre>
+<h4 id="validation-properties">Validation &amp; Properties</h4>
+<pre><code class="language-cpp">bool isValid()                      // Check if polygon has &gt;= 3 vertices
+ws::Vec2i getCentroid()             // Calculate geometric center
+ws::IntRect getBoundingRect()       // Get axis-aligned bounding box
+</code></pre>
+<h4 id="collision-detection">Collision Detection</h4>
+<pre><code class="language-cpp">bool contains(ws::Vec2i point) override        // Point-in-polygon (ray casting)
+bool intersects(Line &amp;line)                   // Line-polygon intersection
+bool intersects(Poly &amp;other)                  // Polygon-polygon intersection
+</code></pre>
+<h4 id="inherited-methods_3">Inherited Methods</h4>
+<pre><code class="language-cpp">void draw(Gdiplus::Graphics* canvas, View &amp;view) override  // Render polygon
+</code></pre>
+<hr />
+<h3 id="class-radial-inherits-drawable">Class: Radial (inherits Drawable)</h3>
+<p>Circle approximation using polygon with dynamic tessellation.</p>
+<h4 id="constructor_3">Constructor</h4>
+<pre><code class="language-cpp">Radial()  // Creates circle with radius 10 at (0,0)
+</code></pre>
+<h4 id="methods_4">Methods</h4>
+<h5 id="geometry-control">Geometry Control</h5>
+<pre><code class="language-cpp">void make(int points = 500)                    // Regenerate with point count
+void setPosition(int posx, int posy)           // Set center position
+void setPosition(ws::Vec2i pos)                // Set center position (vector)
+void move(ws::Vec2i delta)                     // Move by delta
+void move(int deltaX, int deltaY)              // Move by components
+void setPointCount(int count)                  // Set tessellation quality
+void setRadius(int size)                       // Set circle radius
+</code></pre>
+<h5 id="appearance-control">Appearance Control</h5>
+<pre><code class="language-cpp">void setFillColor(Gdiplus::Color color)        // Set interior color
+void setBorderColor(Gdiplus::Color color)      // Set outline color
+void setBorderWidth(int size)                  // Set outline thickness
+</code></pre>
+<h5 id="queries">Queries</h5>
+<pre><code class="language-cpp">int getRadius()                                // Get current radius
+ws::Vec2i getPosition()                        // Get center position
+int getPointCount()                            // Get tessellation points
+</code></pre>
+<h4 id="inherited-methods_4">Inherited Methods</h4>
+<pre><code class="language-cpp">void draw(Gdiplus::Graphics* canvas, View &amp;view) override  // Render circle
+bool contains(ws::Vec2i pos) override          // Point test (delegates to Poly)
+</code></pre>
+<h4 id="private-members_1">Private Members</h4>
+<pre><code class="language-cpp">ws::Vec2i center    // Center position
+int m_points        // Tessellation quality
+int radius          // Circle radius
+Poly poly           // Internal polygon representation
+</code></pre>
+<hr />
+<h2 id="namespace-ws-system-entities">Namespace: ws (System Entities)</h2>
+<p>System-level utilities for timing, clipboard, and GDI+ management.</p>
+<h3 id="class-timer">Class: Timer</h3>
+<p>High-resolution timer using Windows performance counters.</p>
+<h4 id="constructor_4">Constructor</h4>
+<pre><code class="language-cpp">Timer()  // Initializes timer and starts timing
+</code></pre>
+<h4 id="methods_5">Methods</h4>
+<h5 id="double-restart"><code>double restart()</code></h5>
+<p>Restarts timer and returns elapsed time since last restart.
+- <strong>Returns:</strong> Seconds elapsed</p>
+<h5 id="double-getseconds-const"><code>double getSeconds() const</code></h5>
+<p>Gets elapsed time in seconds.
+- <strong>Returns:</strong> Seconds since timer start/restart</p>
+<h5 id="double-getmilliseconds-const"><code>double getMilliSeconds() const</code></h5>
+<p>Gets elapsed time in milliseconds.
+- <strong>Returns:</strong> Milliseconds since timer start/restart</p>
+<h5 id="double-getmicroseconds-const"><code>double getMicroSeconds() const</code></h5>
+<p>Gets elapsed time in microseconds.
+- <strong>Returns:</strong> Microseconds since timer start/restart</p>
+<h4 id="private-members_2">Private Members</h4>
+<pre><code class="language-cpp">LONGLONG startTime    // Starting counter value
+double frequency      // Counter frequency for conversion
+</code></pre>
+<hr />
+<h3 id="class-clipboard">Class: Clipboard</h3>
+<p>Cross-platform clipboard operations for text and images.</p>
+<h4 id="text-operations">Text Operations</h4>
+<h5 id="bool-copytextconst-stdstring-str"><code>bool copyText(const std::string&amp; str)</code></h5>
+<p>Copies UTF-8 text to clipboard.
+- <strong>Parameters:</strong> <code>str</code> - Text to copy
+- <strong>Returns:</strong> <code>true</code> on success</p>
+<h5 id="stdstring-pastetext"><code>std::string pasteText()</code></h5>
+<p>Retrieves text from clipboard.
+- <strong>Returns:</strong> UTF-8 text or empty string</p>
+<h4 id="image-operations">Image Operations</h4>
+<h5 id="bool-copytexturewstexture-texture-wsintrect-rect-0000"><code>bool copyTexture(ws::Texture &amp;texture, ws::IntRect rect = {0,0,0,0})</code></h5>
+<p>Copies texture region to clipboard.
+- <strong>Parameters:</strong>
+  - <code>texture</code> - Source texture
+  - <code>rect</code> - Region to copy (empty = entire texture)
+- <strong>Returns:</strong> <code>true</code> on success
+- <strong>Formats:</strong> CF_DIB and CF_BITMAP</p>
+<h5 id="wstexture-pastetexturewsintrect-rect-0000"><code>ws::Texture pasteTexture(ws::IntRect rect = {0,0,0,0})</code></h5>
+<p>Retrieves image from clipboard.
+- <strong>Parameters:</strong> <code>rect</code> - Optional cropping rectangle
+- <strong>Returns:</strong> Texture object (may be invalid)
+- <strong>Note:</strong> Attempts CF_DIB first, then CF_BITMAP</p>
+<h4 id="utility-methods_1">Utility Methods</h4>
+<pre><code class="language-cpp">bool hasText()           // Check if clipboard contains text
+bool hasTexture()        // Check if clipboard contains image
+bool clear()             // Clear clipboard contents
+bool OpenClipboardCheck() // Internal clipboard access helper
+</code></pre>
+<h4 id="global-instance">Global Instance</h4>
+<pre><code class="language-cpp">ws::Clipboard clipboard  // Pre-instantiated clipboard object
+</code></pre>
+<hr />
+<h3 id="class-gdiplus">Class: GDIPLUS</h3>
+<p>RAII wrapper for GDI+ initialization.</p>
+<h4 id="constructor_5">Constructor</h4>
+<pre><code class="language-cpp">GDIPLUS()  // Calls GdiplusStartup()
+</code></pre>
+<h4 id="destructor">Destructor</h4>
+<pre><code class="language-cpp">~GDIPLUS()  // Calls GdiplusShutdown()
+</code></pre>
+<h4 id="members">Members</h4>
+<pre><code class="language-cpp">Gdiplus::GdiplusStartupInput gdiplusstartup  // Startup parameters
+ULONG_PTR gdiplustoken                       // GDI+ token
+</code></pre>
+<h4 id="global-instance_1">Global Instance</h4>
+<pre><code class="language-cpp">ws::GDIPLUS gdi  // Pre-instantiated GDI+ manager
+</code></pre>
+<hr />
+<h3 id="class-window">Class: Window</h3>
+<p>Main application window with integrated graphics context.</p>
+<h4 id="constructor_6">Constructor</h4>
+<pre><code class="language-cpp">Window(int width, int height, std::string title, 
+       DWORD style = WS_OVERLAPPEDWINDOW, DWORD exStyle = 0)
+</code></pre>
+<h4 id="window-management">Window Management</h4>
+<h5 id="fullscreen-control">Fullscreen Control</h5>
+<pre><code class="language-cpp">void setFullscreen(bool fullscreen)   // Enable/disable fullscreen
+void toggleFullscreen()               // Toggle fullscreen state
+bool getFullscreen() const            // Check fullscreen status
+</code></pre>
+<h5 id="view-management">View Management</h5>
+<pre><code class="language-cpp">void setView(ws::View &amp;v)             // Set window view
+</code></pre>
+<h5 id="window-state">Window State</h5>
+<pre><code class="language-cpp">bool isOpen()                         // Check if window is running
+bool pollEvent(MSG &amp;message)          // Get next window message
+</code></pre>
+<h5 id="rendering">Rendering</h5>
+<pre><code class="language-cpp">void clear(Gdiplus::Color color = Gdiplus::Color(255,0,0,0))  // Clear back buffer
+void draw(Drawable &amp;draw)            // Draw drawable object
+void display()                       // Present back buffer to screen
+</code></pre>
+<h4 id="layer-management">Layer Management</h4>
+<pre><code class="language-cpp">void setLayerAfter(HWND lastHwnd)    // Set window Z-order
+</code></pre>
+<h4 id="public-members_6">Public Members</h4>
+<pre><code class="language-cpp">HWND hwnd                            // Windows window handle
+int x, y, width, height             // Window position and size
+bool isTransparent                   // Transparency flag
+View view                            // Camera/viewport
+ws::Texture backBuffer               // Off-screen render target
+Gdiplus::Graphics* canvas            // Graphics context for drawing
+</code></pre>
+<h4 id="message-processing">Message Processing</h4>
+<p>The window automatically:
+- Handles WM_PAINT by blitting back buffer to screen
+- Handles WM_SIZE by updating viewport and back buffer
+- Handles WM_MOVE by updating position
+- Queues messages for pollEvent() retrieval</p>
+<h4 id="static-members">Static Members</h4>
+<pre><code class="language-cpp">static std::map&lt;HWND, Window*&gt; windowInstances  // Window lookup table
+</code></pre>
+<hr />
+<h2 id="namespace-ws-global-input">Namespace: ws (Global Input)</h2>
+<p>Global input state queries independent of window focus.</p>
+<h3 id="namespace-global">Namespace: Global</h3>
+<h4 id="mouse-functions">Mouse Functions</h4>
+<pre><code class="language-cpp">ws::Vec2i getMousePos(Window &amp;window)  // Get mouse in world coordinates
+ws::Vec2i getMousePos()                // Get mouse in screen coordinates
+</code></pre>
+<h4 id="buttonkey-functions">Button/Key Functions</h4>
+<pre><code class="language-cpp">bool getMouseButton(int vmButton)      // Check mouse button state
+bool getKey(char vmKey)                // Check key state
+</code></pre>
+<p><strong>Note:</strong> These functions use GetAsyncKeyState() and return immediate physical state.</p>
+<p><strong>Virtual Key Codes:</strong>
+- Mouse: VK_LBUTTON, VK_RBUTTON, VK_MBUTTON
+- Keyboard: VK_RETURN, VK_ESCAPE, VK_SPACE, 'A'-'Z', '0'-'9', etc.</p>
+<hr />
+<h2 id="namespace-ws-child-window-api">Namespace: ws (Child Window API)</h2>
+<p>Windows control widgets (buttons, sliders, text boxes, labels).</p>
+<h3 id="base-class-child">Base Class: Child</h3>
+<p>Abstract base for all child controls.</p>
+<h4 id="public-members_7">Public Members</h4>
+<pre><code class="language-cpp">ws::Window *parentRef    // Parent window
+HWND hwnd                // Windows control handle
+DWORD style              // Window styles
+DWORD textStyle          // Text alignment styles
+unsigned int controlID   // Unique control identifier
+COLORREF backgroundColor // Background color
+COLORREF textColor       // Text color
+COLORREF borderColor     // Border color
+</code></pre>
+<h4 id="position-size">Position &amp; Size</h4>
+<pre><code class="language-cpp">void setPosition(int xPos, int yPos)
+void setPosition(ws::Vec2i pos)
+ws::Vec2i getPosition()
+ws::Vec2i getLiteralPosition()  // Scaled screen coordinates
+
+void setSize(ws::Vec2i size)
+void setSize(int w, int h)
+ws::Vec2i getSize()
+ws::Vec2i getLiteralSize()      // Scaled screen dimensions
+</code></pre>
+<h4 id="style-management">Style Management</h4>
+<pre><code class="language-cpp">void addStyle(DWORD addedStyle)
+void removeStyle(DWORD removedStyle)
+bool hasStyle(DWORD checkStyle)
+</code></pre>
+<h4 id="text-management">Text Management</h4>
+<pre><code class="language-cpp">void setText(std::string newText)
+std::string getText()
+</code></pre>
+<h4 id="utility">Utility</h4>
+<pre><code class="language-cpp">bool contains(ws::Vec2i point)    // Point-in-control test
+void update(MSG *getMsg = nullptr) // Sync with parent window
+</code></pre>
+<h4 id="color-control">Color Control</h4>
+<pre><code class="language-cpp">void setFillColor(COLORREF color)
+void setTextColor(COLORREF color)
+void setBorderColor(COLORREF color)
+</code></pre>
+<hr />
+<h3 id="class-button-inherits-child">Class: Button (inherits Child)</h3>
+<p>Standard push button control.</p>
+<h4 id="constructor_7">Constructor</h4>
+<pre><code class="language-cpp">Button()  // Default constructor
+</code></pre>
+<h4 id="initialization">Initialization</h4>
+<pre><code class="language-cpp">bool init(ws::Window &amp;parent)  // Create Windows button
+</code></pre>
+<h4 id="event-handling">Event Handling</h4>
+<pre><code class="language-cpp">bool isPressed(MSG &amp;msg)  // Check if this button was clicked
+</code></pre>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-cpp">if(button.isPressed(msg)) {
+    // Button was clicked
+}
+</code></pre>
+<hr />
+<h3 id="class-slider-inherits-child">Class: Slider (inherits Child)</h3>
+<p>Trackbar/slider control for numeric input.</p>
+<h4 id="constructor_8">Constructor</h4>
+<pre><code class="language-cpp">Slider()  // Default constructor (horizontal)
+</code></pre>
+<h4 id="initialization_1">Initialization</h4>
+<pre><code class="language-cpp">bool init(ws::Window &amp;parent)  // Create Windows trackbar
+</code></pre>
+<h4 id="event-handling_1">Event Handling</h4>
+<pre><code class="language-cpp">bool getScroll(MSG &amp;msg)  // Check for slider movement
+</code></pre>
+<h4 id="orientation">Orientation</h4>
+<pre><code class="language-cpp">void setHorizontal()      // Set horizontal orientation
+void setVertical()        // Set vertical orientation
+</code></pre>
+<h4 id="range-position">Range &amp; Position</h4>
+<pre><code class="language-cpp">void setRange(int minimum = 0, int maximum = 100)
+void setSlidePosition(int pos = 0)
+int getSlidePosition()    // Get current position (0-100 default)
+</code></pre>
+<hr />
+<h3 id="class-textbox-inherits-child">Class: TextBox (inherits Child)</h3>
+<p>Multi-line text input control.</p>
+<h4 id="constructor_9">Constructor</h4>
+<pre><code class="language-cpp">TextBox()  // Default constructor
+</code></pre>
+<h4 id="initialization_2">Initialization</h4>
+<pre><code class="language-cpp">bool init(ws::Window &amp;parent)  // Create Windows edit control
+</code></pre>
+<h4 id="features">Features</h4>
+<ul>
+<li>Multi-line input (ES_MULTILINE)</li>
+<li>Auto-scroll (ES_AUTOVSCROLL, ES_AUTOHSCROLL)</li>
+<li>Client edge border (WS_EX_CLIENTEDGE)</li>
+</ul>
+<h4 id="focus-control">Focus Control</h4>
+<pre><code class="language-cpp">bool getFocus()  // Check if this textbox has keyboard focus
+</code></pre>
+<hr />
+<h3 id="class-label-inherits-child">Class: Label (inherits Child)</h3>
+<p>Static text display control.</p>
+<h4 id="constructor_10">Constructor</h4>
+<pre><code class="language-cpp">Label()  // Default constructor
+</code></pre>
+<h4 id="initialization_3">Initialization</h4>
+<pre><code class="language-cpp">bool init(ws::Window &amp;parent)  // Create Windows static control
+</code></pre>
+<h4 id="default-styles">Default Styles</h4>
+<ul>
+<li>SS_NOTIFY (enables click notifications)</li>
+<li>SS_LEFT (left-aligned text)</li>
+</ul>
+<hr />
+<h2 id="global-variables">Global Variables</h2>
+<pre><code class="language-cpp">namespace ws {
+    Clipboard clipboard    // Pre-instantiated clipboard manager
+    GDIPLUS gdi           // Pre-instantiated GDI+ manager
+}
+</code></pre>
+<hr />
+<h2 id="usage-example">Usage Example</h2>
+<pre><code class="language-cpp">#include &quot;winsimple.hpp&quot;
+
+int main() {
+    ws::Window window(800, 600, &quot;My Application&quot;);
+    ws::Texture playerTexture(&quot;player.png&quot;);
+    ws::Sprite player;
+    player.setTexture(playerTexture);
+    player.setPosition(100, 100);
+
+    ws::Timer timer;
+
+    while(window.isOpen()) {
+        MSG msg;
+        while(window.pollEvent(msg)) {
+            // Handle events
+        }
+
+        // Update
+        if(ws::Global::getKey('W')) player.y -= 5;
+        if(ws::Global::getKey('S')) player.y += 5;
+
+        // Render
+        window.clear();
+        window.draw(player);
+        window.display();
+    }
+
+    return 0;
+}
+</code></pre>
+<hr />
+<h2 id="thread-safety">Thread Safety</h2>
+<ul>
+<li><strong>Not Thread-Safe:</strong> All GUI operations must be performed on the main thread</li>
+<li><strong>Window Messages:</strong> Must be processed on the thread that created the window</li>
+<li><strong>GDI+ Objects:</strong> Should not be shared across threads</li>
+</ul>
+<h2 id="memory-management">Memory Management</h2>
+<ul>
+<li><strong>RAII:</strong> Most classes use RAII for automatic resource cleanup</li>
+<li><strong>Move Semantics:</strong> Texture and other resource-heavy classes support move semantics</li>
+<li><strong>No Copying:</strong> Window class is non-copyable to prevent handle duplication issues</li>
+</ul>
+<h2 id="error-handling">Error Handling</h2>
+<ul>
+<li><strong>File Operations:</strong> Print errors to stderr and return false/nullptr on failure</li>
+<li><strong>Windows API:</strong> Check GetLastError() for detailed error information</li>
+<li><strong>MCI Errors:</strong> Automatically decoded to human-readable strings</li>
+</ul>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li>Windows XP or later (Can support down to windows 95 if GDI+ is provided manually)</li>
+<li>GDI+ (ships with Windows XP and later)</li>
+<li>Standard C++ library</li>
+<li>Windows Common Controls library</li>
+</ul>
+<h2 id="building">Building</h2>
+<pre><code class="language-bash">g++ -o myapp myapp.cpp -lgdi32 -luser32 -lole32 -lmsimg32 -lkernel32 -lwinmm -lcomctl32 -lgdiplus
+</code></pre>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
